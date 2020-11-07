@@ -1452,7 +1452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 9894cd548d1775340ba5a56dd98a2800, type: 2}
-  warp: 0.5
+  warp: 0.02
   blur: 0.004
 --- !u!1 &1789453096
 GameObject:
