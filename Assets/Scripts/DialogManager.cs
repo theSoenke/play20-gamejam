@@ -5,8 +5,13 @@ public class DialogManager : MonoBehaviour
 {
     public GameStateManager gameStateManager;
     public GameObject dialogView;
-    public Button[] buttons;
+    private Button[] buttons;
 
+
+    void Start()
+    {
+        buttons = dialogView.GetComponents<Button>();
+    }
 
     void Update()
     {
