@@ -7,6 +7,10 @@ public class DrinkAnimation : ActionAnimation
 {
     public NavMeshAgent Ken;
     public Transform DrinkTarget;
+    public AudioSource KenAudio;
+    public AudioClip DrinkBeerClip;
+
+    private bool _isAtTarget = false;
 
     public void Start()
     {
@@ -17,8 +21,13 @@ public class DrinkAnimation : ActionAnimation
     {
         if (IsRunning)
         {
-            if(Vector3.Distance(Ken.transform.position, DrinkTarget.position) < 0.2) {
+            if(!_isAtTarget && Vector3.Distance(Ken.transform.position, DrinkTarget.position) < 0.2) {
+                _isAtTarget = true;
                 Ken.enabled = false;
+                KenAudio.clip = DrinkBeerClip;
+                KenAudio.Play();
+            }
+            if(_isAtTarget && !KenAudio.isPlaying) {
                 IsRunning = false;
             }
         }
@@ -28,6 +37,7 @@ public class DrinkAnimation : ActionAnimation
     public override void RunAnimation(GameState state)
     {
         IsRunning = true;
+        _isAtTarget = false;
         Ken.SetDestination(DrinkTarget.position);
         Ken.enabled = true;
     }

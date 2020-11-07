@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ken: {fileID: 0}
   DrinkTarget: {fileID: 0}
-  AnimationDuration: 2
+  KenAudio: {fileID: 0}
+  DrinkBeerClip: {fileID: 8300000, guid: 0c1553adaa2245b8db966be9a77339d3, type: 3}
 --- !u!1 &5022611612069798261
 GameObject:
   m_ObjectHideFlags: 0
