@@ -35,9 +35,9 @@ public class GameStateManager : MonoBehaviour
     public GameState State;
     public ActionDescription[] ActionsForSelection;
     public event Action<GamePhase> GamePhaseChanged;
-    public GamePhase Phase 
-    { 
-        get => _phase; 
+    public GamePhase Phase
+    {
+        get => _phase;
         protected set
         {
             if (_phase == value)
@@ -50,7 +50,7 @@ public class GameStateManager : MonoBehaviour
 
     private void Awake()
     {
-        if(Instance != null && Instance != this)
+        if (Instance != null && Instance != this)
         {
             Debug.LogError("GameStateManager already exists in Scene. Deleting...");
             Destroy(this);
@@ -71,7 +71,7 @@ public class GameStateManager : MonoBehaviour
             case GamePhase.CalculatingActions:
                 ActionsForSelection = SelectActionsViaProbability(State).ToArray();
                 Phase = GamePhase.WaitingForSelection;
-                break;           
+                break;
             case GamePhase.AnimatingAction:
                 if (_currentAction.Animation == null || !_currentAction.Animation.IsRunning)
                 {
@@ -81,13 +81,14 @@ public class GameStateManager : MonoBehaviour
                 break;
             case GamePhase.PhaseComplete:
                 Phase = GamePhase.CalculatingActions;
+                CheckForGameEnd();
                 break;
         }
     }
 
     public void SelectAction(ActionDescription action)
     {
-        if(Phase != GamePhase.WaitingForSelection)
+        if (Phase != GamePhase.WaitingForSelection)
         {
             Debug.LogError("Try selecting action while not in waiting phase..");
             return;
@@ -139,15 +140,23 @@ public class GameStateManager : MonoBehaviour
         {
             var rng = Random.Range(0, totalProbability);
             var probabilityOffset = 0;
-            foreach(var action in cachedActionList) {
+            foreach (var action in cachedActionList)
+            {
                 probabilityOffset += action.ActionProbability;
-                if(rng < probabilityOffset && rng >= (probabilityOffset - action.ActionProbability)) {
+                if (rng < probabilityOffset && rng >= (probabilityOffset - action.ActionProbability))
+                {
                     result.Add(action.Action);
                     break;
                 }
             }
         }
         return result;
+    }
+
+    private void CheckForGameEnd() {
+        if (State.IsGameOver) {
+            EndGame();
+        }
     }
 
     public void EndGame()

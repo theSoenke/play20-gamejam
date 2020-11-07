@@ -7,12 +7,15 @@ public class GameState : MonoBehaviour
     public float PeeLevel { get; protected set; }
     public float Time { get; protected set; }
 
+    public bool IsInside { get; protected set; }
+    public bool IsGameOver { get; protected set;}
+
     private void Start()
     {
         ResetState();
     }
 
-    private void Update()    
+    private void Update()
     {
         Time += UnityEngine.Time.deltaTime;
     }
@@ -26,16 +29,25 @@ public class GameState : MonoBehaviour
 
     public void SusAdd(float value)
     {
-        Sus += value;        
+        Sus += value;
     }
 
     public void PissReset()
     {
-       PeeLevel = 0f;     
+        PeeLevel = 0f;
     }
 
-   
-   
+    public void GoInside()
+    {
+        IsInside = true;
+    }
+
+    public void GameOver() {
+        IsGameOver = true;
+    }
+
+
+
     /// <summary>
     /// Call this when the Game Starts.
     /// </summary>
@@ -45,5 +57,6 @@ public class GameState : MonoBehaviour
         Sus = 0;
         PeeLevel = 0;
         Time = 0;
+        IsInside = false;
     }
 }

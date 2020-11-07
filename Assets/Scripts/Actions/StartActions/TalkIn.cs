@@ -13,14 +13,12 @@ public class TalkIn : ActionDescription
 
     public override int EvaluateProbability(GameState state)
     {
-       
-
-        return 100;
+        return state.IsInside?0:1;
     }
 
     public override void Execute(GameState state)
     {
         state.SusAdd(SusValue);
-
+        state.GoInside();
     }   
 }

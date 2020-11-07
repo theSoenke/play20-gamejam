@@ -2,6 +2,8 @@
 {
     public float SusValue = 10f;
 
+    public float PeeLevelFactor = 1f;
+
     private void Awake()
     {
         //If(!Animation) AN = null;
@@ -9,7 +11,11 @@
 
     public override int EvaluateProbability(GameState state)
     {
-        return 100;
+        if (!state.IsInside)
+        {
+            return 0;
+        }
+        return Mathf.RoundToInt(state.PeeLevel * 2 * PeeLevelFactor);
     }
 
     public override void Execute(GameState state)

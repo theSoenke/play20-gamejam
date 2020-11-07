@@ -5,20 +5,23 @@ using UnityEngine;
 public class PoliceArrived : ActionDescription
 {
 
-  public override string Description(GameState state)
+    public float SuspicionThreshold = 100f;
+    public float SusFactor = 1f;
+
+    public override string Description(GameState state)
     {
-        return "Shit  Cops";
+        return "Shit... Cops";
     }
 
     public override int EvaluateProbability(GameState state)
     {
-    
-        return 0;
+
+        var value = Mathf.Max(0, state.Sus - SuspicionThreshold) * 2 * SusFactor;
+        return Mathf.RoundToInt(value);
     }
 
     public override void Execute(GameState state)
     {
- 
-
-    }   
+        state.GameOver();
+    }
 }
