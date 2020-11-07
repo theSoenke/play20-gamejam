@@ -6,9 +6,10 @@ public class GameState : MonoBehaviour
     public float Sus { get; protected set; }
     public float PeeLevel { get; protected set; }
     public float Time { get; protected set; }
+    public float Sickness { get; protected set; }
 
     public bool IsInside { get; protected set; }
-    public bool IsGameOver { get; protected set;}
+    public bool IsGameOver { get; protected set; }
 
     public int Drinks { get; protected set; }
 
@@ -32,7 +33,15 @@ public class GameState : MonoBehaviour
             Drinks++;
         }
 
+        Sickness += strength;
+
         PeeLevel += volume;
+    }
+
+    public void SoberUp(float sickness, float drunk)
+    {
+        Drunk -= drunk;
+        Sickness -= sickness;
     }
 
     public void SusAdd(float value)
@@ -50,7 +59,8 @@ public class GameState : MonoBehaviour
         IsInside = true;
     }
 
-    public void GameOver() {
+    public void GameOver()
+    {
         IsGameOver = true;
     }
 
@@ -65,6 +75,8 @@ public class GameState : MonoBehaviour
         Sus = 0;
         PeeLevel = 0;
         Time = 0;
+        Sickness = 0;
         IsInside = false;
+        IsGameOver = false;
     }
 }
