@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-public class PukeAction : ActionDescription
+public class PukeToiletAction : ActionDescription
 {
     public float SusValue = 10f;
     public float DrunkValue = 2f;
 
     public override string Description(GameState state)
     {
-        if (state.Drunk < 0.9f)
+        if (state.Drunk < 75)
         {
             return "I feel sick, I think I have to throw up..";
         }

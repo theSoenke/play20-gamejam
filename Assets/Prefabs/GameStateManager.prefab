@@ -340,7 +340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8545446881579974347, guid: 1bd205d28931c4341b7f883916b8a489, type: 3}
       propertyPath: m_Name
-      value: Puke
+      value: PukeToilet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd205d28931c4341b7f883916b8a489, type: 3}
@@ -441,6 +441,14 @@ PrefabInstance:
       objectReference: {fileID: 1637734918}
     - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
       propertyPath: DrinkValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: DrinkVolumeValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: DrinkStrengthValue
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
