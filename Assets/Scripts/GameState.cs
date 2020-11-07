@@ -6,6 +6,7 @@ public class GameState : MonoBehaviour
 {
     public float Drunk { get; protected set; }
     public float Sus { get; protected set; }
+    public float PissRounds { get; protected set; }
 
 
     public void Drink(float value)
@@ -18,5 +19,10 @@ public class GameState : MonoBehaviour
     public void SusAdd(float value)
     {
         Sus += value;        
+    }
+
+    public void PissReset()
+    {
+       PissRounds = 0f;     
     }
 }
