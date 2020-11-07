@@ -132,7 +132,7 @@ public class GameStateManager : MonoBehaviour
             cachedActionList.Add(cachedAction);
         }
         var result = new List<ActionDescription>();
-        for (var _ = 0; _ <= 4; _++)
+        for (var _ = 0; _ < 4; _++)
         {
             var rng = Random.Range(0, totalProbability);
             var probabilityOffset = 0;
