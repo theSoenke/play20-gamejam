@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PissActiom: ActionDescription
+public class PissAction: ActionDescription
 {
     public float SusValue = 10f;
 
