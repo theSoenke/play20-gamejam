@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 
-public class PukeToiletAction : ActionDescription
+public class PukePotAction : ActionDescription
 {
     public float SusValue = 10f;
     public float DrunkValue = 2f;
-
     public float PukeThreshold = 75;
     public float PukeFactor = 1f;
 
@@ -12,11 +11,11 @@ public class PukeToiletAction : ActionDescription
     {
         if (state.Drunk < 75)
         {
-            return "I feel sick, I think I have to throw up..";
+            return "I feel sick, where is this toilet..";
         }
         else
         {
-            return "BBBLLLAAARRGGGHHH!!!";
+            return "...";
         }
     }
 
@@ -37,3 +36,4 @@ public class PukeToiletAction : ActionDescription
         state.Drink(-DrunkValue, -DrunkValue);
     }   
 }
+
