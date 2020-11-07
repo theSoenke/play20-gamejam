@@ -3505,6 +3505,22 @@ PrefabInstance:
       propertyPath: PukeTarget
       value: 
       objectReference: {fileID: 1757236413}
+    - target: {fileID: 5022611610561560635, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
+      propertyPath: KenAudio
+      value: 
+      objectReference: {fileID: 1849131626}
+    - target: {fileID: 5022611610561560635, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
+      propertyPath: ScratchClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 50ccd3e75ec7da64e93b95f4f8da4851, type: 3}
+    - target: {fileID: 5022611610561560635, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
+      propertyPath: MusicAudioSource
+      value: 
+      objectReference: {fileID: 1620091827}
+    - target: {fileID: 5022611610561560635, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
+      propertyPath: PeedYourselfClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a624f7a18962b404fae510f81357fa96, type: 3}
     - target: {fileID: 5022611612069798256, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
       propertyPath: m_RootOrder
       value: 0
