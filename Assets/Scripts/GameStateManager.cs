@@ -48,7 +48,6 @@ public class GameStateManager : MonoBehaviour
 
     public IEnumerable<ActionDescription> SelectActionsViaProbability(GameState state)
     {
-        var cachedActionList = new List<ActionWithCachedPropability>();
-        return Enumerable.Empty<ActionDescription>();
+        return Actions.Take(4).ToArray();
     }
 }
