@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class DrinkAction : ActionDescription
+﻿public class DrinkAction : ActionDescription
 {
     public float DrinkValue = 2f;
 
@@ -24,6 +19,9 @@ public class DrinkAction : ActionDescription
 
     public override string Description(GameState state)
     {
-        return "Oh, look at this nice piece of alcohol!";
+        string[] responses = { "Oh, look at this nice piece of alcohol!", "Do I see a beer over there?" };
+        System.Random random = new System.Random();
+        int selection = random.Next(0, responses.Length);
+        return responses[selection];
     }
 }
