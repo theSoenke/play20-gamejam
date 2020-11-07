@@ -38,8 +38,10 @@ public class DrinkAnimation : ActionAnimation
     {
         IsRunning = true;
         _isAtTarget = false;
-        Ken.SetDestination(DrinkTarget.position);
-        Ken.enabled = true;
+        if(! (Vector3.Distance(Ken.transform.position, DrinkTarget.position) < 0.2)) {
+            Ken.SetDestination(DrinkTarget.position);
+            Ken.enabled = true;
+        }
     }
 
     private void OnPhaseChanged(GamePhase phase)
