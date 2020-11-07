@@ -28,13 +28,11 @@ public class ToiletAction: ActionDescription
 
     public override string Description(GameState state)
     {
-        if(state.Drunk == 0)
-        {
-            return "I better get to the toilet soon";
-        } 
-        else
+        if (state.PeeLevel > 30)
         {
             return "Oh, I have to take a piss so badly..";
         }
+
+        return "I better get to the toilet soon";
     }
 }
