@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PissYourselfAnimation : ActionAnimation
 {
+    public AudioSource MusicAudioSource;
+    public AudioSource KenAudio;
+    public AudioClip PeedYourselfClip;
+    public AudioClip ScratchClip;
 
     private void Update()
     {
