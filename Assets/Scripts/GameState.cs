@@ -27,7 +27,10 @@ public class GameState : MonoBehaviour
         Drunk += strength;
         Drunk = Mathf.Max(Drunk, 0);
 
-        Drinks++;
+        if (strength > 0 && volume > 0)
+        {
+            Drinks++;
+        }
 
         PeeLevel += volume;
     }
