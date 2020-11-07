@@ -12,12 +12,6 @@ public class PoliceAnimation : ActionAnimation
         {
             if (!KenAudio.isPlaying)
             {
-                KenAudio.clip = PoliceClip;
-                KenAudio.Play();
-                IsRunning = false;
-            }
-            if (!KenAudio.isPlaying)
-            {
                 IsRunning = false;
             }
         }
@@ -26,5 +20,7 @@ public class PoliceAnimation : ActionAnimation
     public override void RunAnimation(GameState state)
     {
         IsRunning = true;
+        KenAudio.clip = PoliceClip;
+        KenAudio.Play();
     }
 }
