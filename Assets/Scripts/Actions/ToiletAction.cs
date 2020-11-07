@@ -1,4 +1,6 @@
-﻿public class ToiletAction: ActionDescription
+﻿using UnityEngine;
+
+public class ToiletAction: ActionDescription
 {
     public float SusValue = 10f;
 
