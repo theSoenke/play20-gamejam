@@ -17,7 +17,7 @@ public class DialogManager : MonoBehaviour
 
     void Update()
     {
-        switch (GamePhase.WaitingForSelection)
+        switch (gameStateManager.Phase)
         {
             case GamePhase.WaitingForSelection:
                 dialogView.SetActive(true);
@@ -25,6 +25,7 @@ public class DialogManager : MonoBehaviour
                 break;
             default:
                 dialogView.SetActive(false);
+                break;
         }
     }
 
