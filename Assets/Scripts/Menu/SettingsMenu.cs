@@ -13,13 +13,8 @@ public class SettingsMenu : MonoBehaviour
     private float MasterVolume = 1f;
 
     private void Awake()
-    {        
-        if (!PlayerPrefs.HasKey("MasterVolume"))
-        {
-            PlayerPrefs.SetFloat("MasterVolume", 1);
-            PlayerPrefs.Save();
-        }
-        MasterVolume = PlayerPrefs.GetFloat("MasterVolume");
+    {
+        MasterVolume = PlayerSettings.MasterVolume;
 
         MasterVolumeInput.text = MasterVolume.ToString("0.00");
         MasterVolumeSlider.value = MasterVolume;
@@ -38,14 +33,14 @@ public class SettingsMenu : MonoBehaviour
 
     public void BackClick()
     {
-        PlayerPrefs.SetFloat("MasterVolume", MasterVolume);
-        PlayerPrefs.Save();
+        PlayerSettings.MasterVolume = MasterVolume;
+        PlayerSettings.Save();
         SceneManager.LoadScene(BackScene.SceneName);
     }
 
     public void ResetClick()
     {
-        MasterVolume = PlayerPrefs.GetFloat("MasterVolume");
+        MasterVolume = PlayerSettings.MasterVolume;
         MasterVolumeInput.text = MasterVolume.ToString("0.00");
         MasterVolumeSlider.value = MasterVolume;
     }

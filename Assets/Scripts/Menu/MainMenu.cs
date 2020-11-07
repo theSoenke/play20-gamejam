@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
     void Awake()
     {
         ExitDialogRoot.SetActive(false);
+        AudioListener.volume = PlayerSettings.MasterVolume;
     }
 
     public void StartGameClicked()
