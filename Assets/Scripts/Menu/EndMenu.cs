@@ -18,6 +18,10 @@ public class EndMenu : MonoBehaviour
         AddStatsEntry("Drinks", GameStateManager.Instance.State.Drinks.ToString("0"));
         AddStatsEntry("Promille", (GameStateManager.Instance.State.Drunk / 100f * 3f).ToString("0.00")+ " ‰");
         AddStatsEntry("Suspicious", GameStateManager.Instance.State.Sus.ToString("0"));
+        if (GameStateManager.Instance.State.HasPeedHimself)
+        {
+            AddStatsEntry("Peed yourself", "Yes");
+        }
     }
 
     public void AddStatsEntry(string name, string value)

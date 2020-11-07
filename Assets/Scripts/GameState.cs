@@ -8,6 +8,8 @@ public class GameState : MonoBehaviour
     public float Time { get; protected set; }
     public float Sickness { get; protected set; }
 
+    public bool HasPeedHimself { get; protected set; }
+
     public bool IsInside { get; protected set; }
     public bool IsGameOver { get; protected set; }
 
@@ -49,9 +51,11 @@ public class GameState : MonoBehaviour
         Sus += value;
     }
 
-    public void PissReset()
+    public void PissReset(bool himself=false)
     {
         PeeLevel = 0f;
+        if (himself && !HasPeedHimself)
+            HasPeedHimself = true;
     }
 
     public void GoInside()
