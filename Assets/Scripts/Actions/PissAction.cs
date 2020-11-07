@@ -27,7 +27,8 @@ public class PissAction: ActionDescription
         if(state.Drunk == 0)
         {
             return "I better get to the toilet soon";
-        } else
+        } 
+        else
         {
             return "Oh, I have to take a piss so badly..";
         }
