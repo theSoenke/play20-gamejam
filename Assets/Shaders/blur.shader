@@ -10,7 +10,6 @@
 	{		
 		Pass
 		{
-			CGPROGRAM
 			#pragma vertex vertex_shader
 			#pragma fragment pixel_shader
 			#pragma target 2.0
@@ -27,7 +26,9 @@
 			float4 pixel_shader (float4 vertex:SV_POSITION):COLOR
 			{
 				vector <float,2> uv = vertex.xy/_ScreenParams.xy;
-				uv.y = 1-uv.y;
+				#if UNITY_UV_STARTS_AT_TOP
+					uv.y = 1-uv.y;
+				#endif
 				uv.x+=cos(uv.y*2.0+_Time.g) * _Warp;
 				uv.y+=sin(uv.x*2.0+_Time.g) * _Warp;
 				float offset = sin(_Time.g *0.5) * _Blur;    
