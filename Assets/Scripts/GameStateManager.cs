@@ -2,14 +2,15 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 class ActionWithCachedPropability
 {
-    public ActionDescription Action {get; protected set;}
-    public int ActionPropability {get; protected set;}
+    public ActionDescription Action { get; set; }
+    public int ActionProbability { get; set; }
 }
 
-public enum GamePhase 
+public enum GamePhase
 {
     CalculatingActions,
     WaitingForSelection,
@@ -23,9 +24,10 @@ public class GameStateManager : MonoBehaviour
 
     public ActionDescription[] Actions;
 
-    public GamePhase Phase {get; protected set;} = GamePhase.CalculatingActions;
+    public GamePhase Phase { get; protected set; } = GamePhase.CalculatingActions;
 
-    public void Awake() 
+
+    public void Awake()
     {
         Actions = GetComponentsInChildren<ActionDescription>();
     }
@@ -53,6 +55,28 @@ public class GameStateManager : MonoBehaviour
 
     public IEnumerable<ActionDescription> SelectActionsViaProbability(GameState state)
     {
-        return new ActionDescription[]{Actions[0], Actions[0], Actions[1], Actions[2]};
+        var cachedActionList = new List<ActionWithCachedPropability>();
+        var totalProbability = 0;
+        foreach (var action in Actions)
+        {
+            var probability = action.EvaluateProbability(state);
+            totalProbability += probability;
+            var cachedAction = new ActionWithCachedPropability { Action = action, ActionProbability = probability };
+            cachedActionList.Add(cachedAction);
+        }
+        var result = new List<ActionDescription>();
+        for (var _ = 0; _ <= 4; _++)
+        {
+            var rng = Random.Range(0, totalProbability);
+            var probabilityOffset = 0;
+            foreach(var action in cachedActionList) {
+                probabilityOffset += action.ActionProbability;
+                if(rng < probabilityOffset && rng >= (probabilityOffset - action.ActionProbability)) {
+                    result.Add(action.Action);
+                    break;
+                }
+            }
+        }
+        return result;
     }
 }
