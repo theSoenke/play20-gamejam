@@ -78,11 +78,18 @@ public class GameStateManager : MonoBehaviour
             case GamePhase.AnimatingAction:
                 if (_currentAction.Animation == null || !_currentAction.Animation.IsRunning)
                 {
-                    _currentAction = null;
-                    Phase = GamePhase.PhaseComplete;
+                    //_currentAction = null;
+                    //Phase = GamePhase.PhaseComplete;
+                    Phase = GamePhase.ExecutingAction;
                 }
                 break;
+            case GamePhase.ExecutingAction:
+                _currentAction.Execute(State);
+                _currentAction = null;
+                Phase = GamePhase.PhaseComplete;
+                break;
             case GamePhase.PhaseComplete:
+                State.NextRound();
                 Phase = GamePhase.CalculatingActions;
                 CheckForGameEnd();
                 break;
@@ -96,14 +103,18 @@ public class GameStateManager : MonoBehaviour
             Debug.LogError("Try selecting action while not in waiting phase..");
             return;
         }
-
         _currentAction = action;
-        Phase = GamePhase.ExecutingAction;
-
-        _currentAction.Execute(State);
 
         Phase = GamePhase.AnimatingAction;
         _currentAction.Animation?.RunAnimation(State);
+
+
+       
+        //Phase = GamePhase.ExecutingAction;
+
+        //_currentAction.Execute(State);
+
+       
     }
 
     //public void UpdateGame()

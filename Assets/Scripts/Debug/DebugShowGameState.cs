@@ -15,7 +15,7 @@ public class DebugShowGameState : MonoBehaviour
 
     private void OnGamePhaseChanged(GamePhase phase)
     {
-        if (phase == GamePhase.AnimatingAction) 
+        if (phase == GamePhase.PhaseComplete) 
         {
             DrunkValueText.text = GameStateManager.Instance.State.Drunk.ToString("0.0");
             SusValueText.text = GameStateManager.Instance.State.Sus.ToString("0.0");

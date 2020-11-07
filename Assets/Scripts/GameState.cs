@@ -25,6 +25,12 @@ public class GameState : MonoBehaviour
         Time += UnityEngine.Time.deltaTime;
     }
 
+    public void NextRound()
+    {
+        Sickness += Sickness * 0.05f;
+        PeeLevel += PeeLevel * 0.1f;
+    }
+
     public void Drink(float strength, float volume)
     {
         Drunk += strength;
