@@ -23,7 +23,6 @@ public class DrinkAnimation : ActionAnimation
         {
             if(!_isAtTarget && Vector3.Distance(Ken.transform.position, DrinkTarget.position) < 0.2) {
                 _isAtTarget = true;
-                //Ken.enabled = false;
                 KenAudio.clip = DrinkBeerClip;
                 KenAudio.Play();
             }
@@ -40,7 +39,6 @@ public class DrinkAnimation : ActionAnimation
         _isAtTarget = false;
         if(! (Vector3.Distance(Ken.transform.position, DrinkTarget.position) < 0.2)) {
             Ken.SetDestination(DrinkTarget.position);
-            // Ken.enabled = true;
         }
     }
 

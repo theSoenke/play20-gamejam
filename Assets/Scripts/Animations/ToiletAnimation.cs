@@ -23,7 +23,6 @@ public class ToiletAnimation : ActionAnimation
             if (!_isAtTarget && Vector3.Distance(Ken.transform.position, ToiletTarget.position) < 0.2)
             {
                 _isAtTarget = true;
-                // Ken.enabled = false;
                 KenAudio.clip = ToiletClip;
                 KenAudio.Play();
             }
@@ -41,7 +40,6 @@ public class ToiletAnimation : ActionAnimation
         if (!(Vector3.Distance(Ken.transform.position, ToiletTarget.position) < 0.2))
         {
             Ken.SetDestination(ToiletTarget.position);
-            // Ken.enabled = true;
         }
     }
 
