@@ -5,10 +5,13 @@ public class DrunkEffect : MonoBehaviour
 {
 	private float _startWarp;
 	private float _startBlur;
+	private float _startBlurMin;
 
 	public Material material;
 	public float Warp = 0.02F;
 	public float Blur = 0.004F;
+	public float TimeScale = 1f;
+	public float BlurMin = 0f;
 
 	public AnimationCurve DrunkLevelWeight;
 	public float DrunkLevelScale = 60;
@@ -17,9 +20,11 @@ public class DrunkEffect : MonoBehaviour
     {
         _startWarp = Warp;
 		_startBlur = Blur;
+		_startBlurMin = BlurMin;
 
 		Warp = 0;
 		Blur = 0;
+		BlurMin = 0;
     }
 
     void Update()
@@ -30,6 +35,7 @@ public class DrunkEffect : MonoBehaviour
 			var weight = DrunkLevelWeight.Evaluate(time);
 			Warp = _startWarp * weight;
 			Blur = _startBlur * weight;
+			BlurMin = _startBlurMin * weight;
         }
     }
 
@@ -38,6 +44,8 @@ public class DrunkEffect : MonoBehaviour
 	{
 		material.SetFloat("_Warp", Warp);
 		material.SetFloat("_Blur", Blur);
+		material.SetFloat("_TimeScale", TimeScale);
+		material.SetFloat("_BlurMin", BlurMin);
 		Graphics.Blit(source, destination, material);
 	}
 }

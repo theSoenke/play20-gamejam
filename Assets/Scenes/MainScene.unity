@@ -1454,7 +1454,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 9894cd548d1775340ba5a56dd98a2800, type: 2}
   Warp: 0.02
-  Blur: 0.004
+  Blur: 0.8
+  TimeScale: 2
+  BlurMin: 0.2
   DrunkLevelWeight:
     serializedVersion: 2
     m_Curve:
@@ -1468,14 +1470,23 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.7357691
-      value: 0.10762335
-      inSlope: 0.48133656
-      outSlope: 0.48133656
+      time: 0.3683769
+      value: 0.072644666
+      inSlope: 0.110607736
+      outSlope: 0.110607736
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.56592005
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8274327
+      value: 0.5157114
+      inSlope: 3.0049458
+      outSlope: 3.0049458
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.2345002
     - serializedVersion: 3
       time: 1
       value: 1
