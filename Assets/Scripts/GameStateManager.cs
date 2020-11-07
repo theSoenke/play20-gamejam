@@ -152,6 +152,7 @@ public class GameStateManager : MonoBehaviour
 
     public void EndGame()
     {
+        Destroy(this.gameObject);
         SceneManager.LoadScene(EndScene.SceneName);
     }
 }
