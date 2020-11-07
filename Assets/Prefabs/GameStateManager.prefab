@@ -283,14 +283,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08d6c0ce913644d44ac67bac8e0a5725, type: 3}
---- !u!4 &7497077754069152227 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8487020335311941953, guid: 08d6c0ce913644d44ac67bac8e0a5725, type: 3}
-  m_PrefabInstance: {fileID: 2147386308455989410}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3985091791702933175 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3062711246056439317, guid: 08d6c0ce913644d44ac67bac8e0a5725, type: 3}
+  m_PrefabInstance: {fileID: 2147386308455989410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7497077754069152227 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8487020335311941953, guid: 08d6c0ce913644d44ac67bac8e0a5725, type: 3}
   m_PrefabInstance: {fileID: 2147386308455989410}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2600958970957734276
@@ -635,14 +635,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
---- !u!4 &4609991046442951927 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
-  m_PrefabInstance: {fileID: 5022611612141059346}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1885799816933761920 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6888346165150883474, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+  m_PrefabInstance: {fileID: 5022611612141059346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4609991046442951927 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
   m_PrefabInstance: {fileID: 5022611612141059346}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5308544949654490953
@@ -652,6 +652,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5022611612069798256}
     m_Modifications:
+    - target: {fileID: 2459328592721759890, guid: 9cab6965128d361428d9df11fdd56908, type: 3}
+      propertyPath: DrinkValue
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459328592721759890, guid: 9cab6965128d361428d9df11fdd56908, type: 3}
+      propertyPath: SuspicionValue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4455970797816929852, guid: 9cab6965128d361428d9df11fdd56908, type: 3}
       propertyPath: m_Name
       value: Dance
