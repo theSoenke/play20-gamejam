@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
@@ -29,7 +30,7 @@ public class DialogManager : MonoBehaviour
 
     private void UpdateSelection()
     {
-        var actions = gameStateManager.Actions;
+        var actions = gameStateManager.SelectActionsViaProbability(gameStateManager.State).ToArray<ActionDescription>();
         if (actions.Length < buttons.Length)
         {
             Debug.LogError("Gimme some actions");
