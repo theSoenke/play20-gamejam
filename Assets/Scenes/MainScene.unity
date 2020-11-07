@@ -2857,6 +2857,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
+--- !u!114 &576746129370765230 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1817769145, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
+  m_PrefabInstance: {fileID: 576746129370765229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5fc6a9822e7406d29633c5812f9c67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5022611610345284814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2888,6 +2899,14 @@ PrefabInstance:
       propertyPath: DrinkTarget
       value: 
       objectReference: {fileID: 1952185504}
+    - target: {fileID: 541994013264059824, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
+      propertyPath: Ken
+      value: 
+      objectReference: {fileID: 576746129370765230}
+    - target: {fileID: 541994013264059824, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
+      propertyPath: DancePoints
+      value: 
+      objectReference: {fileID: 692551631}
     - target: {fileID: 5022611610345284816, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
       propertyPath: KenAudio
       value: 

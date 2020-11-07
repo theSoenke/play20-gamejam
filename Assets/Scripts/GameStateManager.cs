@@ -61,6 +61,7 @@ public class GameStateManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         AudioListener.volume = PlayerSettings.MasterVolume;
+        Debug.Log("Set Master-Volume to " + AudioListener.volume);
 
         Actions = GetComponentsInChildren<ActionDescription>();
         Phase = GamePhase.CalculatingActions;
