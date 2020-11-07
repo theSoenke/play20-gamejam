@@ -10,6 +10,7 @@
 	{		
 		Pass
 		{
+			CGPROGRAM
 			#pragma vertex vertex_shader
 			#pragma fragment pixel_shader
 			#pragma target 2.0
