@@ -24,6 +24,6 @@ public class DebugShowGameState : MonoBehaviour
 
     public void EndGame()
     {
-
+        GameStateManager.Instance.EndGame();
     }
 }

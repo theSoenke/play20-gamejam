@@ -64,6 +64,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Actions: []
+  EndScene:
+    m_SceneAsset: {fileID: 102900000, guid: a5ec3c9a9e05f104f943b7f66114b289, type: 3}
+    m_SceneName: EndScene
   State: {fileID: 5022611612069798258}
   ActionsForSelection: []
 --- !u!114 &5022611612069798258

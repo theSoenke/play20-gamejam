@@ -3,6 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.SceneManagement;
 
 class ActionWithCachedPropability
 {
@@ -28,6 +29,8 @@ public class GameStateManager : MonoBehaviour
 
     [SerializeField]
     private ActionDescription[] Actions;
+
+    public SceneField EndScene;
 
     public GameState State;
     public ActionDescription[] ActionsForSelection;
@@ -147,5 +150,8 @@ public class GameStateManager : MonoBehaviour
         return result;
     }
 
-
+    public void EndGame()
+    {
+        SceneManager.LoadScene(EndScene.SceneName);
+    }
 }
