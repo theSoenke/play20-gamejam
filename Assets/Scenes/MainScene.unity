@@ -198,6 +198,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462286}
   m_CullTransparentMesh: 0
+--- !u!23 &35126478 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2287993731244198815, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
+  m_PrefabInstance: {fileID: 576746129370765229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &131135079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 131135080}
+  m_Layer: 0
+  m_Name: DoorPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &131135080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131135079}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 6.25, y: 0, z: -2.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &177913757
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +353,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &209243077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2844016565949764190, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
+  m_PrefabInstance: {fileID: 5022611610345284814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &209243080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209243077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627e2ac415727e8b4912a9e3cfa39993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KenMesh: {fileID: 35126478}
+  Ken: {fileID: 1835805414}
+  KenAudio: {fileID: 1849131626}
+  KnockClip: {fileID: 8300000, guid: db3ef97da63b6b5978bbc4c38a5296c2, type: 3}
+  DoorPosition: {fileID: 131135080}
 --- !u!114 &226833961 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1817769145, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
@@ -2572,6 +2629,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789453096}
   m_CullTransparentMesh: 0
+--- !u!4 &1835805414 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 576746131012081093, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
+  m_PrefabInstance: {fileID: 576746129370765229}
+  m_PrefabAsset: {fileID: 0}
 --- !u!195 &1849131625 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 1849131625, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
@@ -3378,6 +3440,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ken
       objectReference: {fileID: 0}
+    - target: {fileID: 576746131012081098, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287993731244198815, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
 --- !u!1001 &5022611610345284814
@@ -3495,6 +3565,10 @@ PrefabInstance:
       propertyPath: PukeTarget
       value: 
       objectReference: {fileID: 2092026161}
+    - target: {fileID: 7073527085290064756, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
+      propertyPath: Animation
+      value: 
+      objectReference: {fileID: 209243080}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
 --- !u!1001 &5084782600971654772
