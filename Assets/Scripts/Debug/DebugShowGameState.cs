@@ -21,4 +21,9 @@ public class DebugShowGameState : MonoBehaviour
             SusValueText.text = GameStateManager.Instance.State.Sus.ToString("0.0");
         }
     }
+
+    public void EndGame()
+    {
+
+    }
 }
