@@ -48,6 +48,6 @@ public class GameStateManager : MonoBehaviour
 
     public IEnumerable<ActionDescription> SelectActionsViaProbability(GameState state)
     {
-        return Actions.Take(4).ToArray();
+        return new ActionDescription[]{Actions[0], Actions[0], Actions[1], Actions[2]};
     }
 }
