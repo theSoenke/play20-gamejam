@@ -5,7 +5,17 @@ public class GameState : MonoBehaviour
     public float Drunk { get; protected set; }
     public float Sus { get; protected set; }
     public float PeeLevel { get; protected set; }
+    public float Time { get; protected set; }
 
+    private void Start()
+    {
+        ResetState();
+    }
+
+    private void Update()    
+    {
+        Time += UnityEngine.Time.deltaTime;
+    }
 
     public void Drink(float value)
     {
@@ -22,5 +32,18 @@ public class GameState : MonoBehaviour
     public void PissReset()
     {
        PeeLevel = 0f;     
+    }
+
+   
+   
+    /// <summary>
+    /// Call this when the Game Starts.
+    /// </summary>
+    public void ResetState()
+    {
+        Drunk = 0;
+        Sus = 0;
+        PeeLevel = 0;
+        Time = 0;
     }
 }
