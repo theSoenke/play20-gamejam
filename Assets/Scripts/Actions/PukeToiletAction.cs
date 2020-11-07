@@ -27,13 +27,13 @@ public class PukeToiletAction : ActionDescription
             return 0;
         }
 
-        var value = Mathf.Max(0, state.Sus - PukeThreshold) * 2 * PukeFactor;
+        var value = Mathf.Max(0, state.Sickness - PukeThreshold) * 2 * PukeFactor;
         return Mathf.RoundToInt(value);
     }
 
     public override void Execute(GameState state)
     {
         state.SusAdd(SusValue);
-        state.Drink(-DrunkValue, -DrunkValue);
-    }   
+        state.SoberUp(DrunkValue, DrunkValue * 0.5f);
+    }
 }

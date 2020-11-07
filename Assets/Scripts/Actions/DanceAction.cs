@@ -52,7 +52,7 @@ public class DanceAction : ActionDescription
         }
         if (state.Drunk > 20)
         {
-            state.Drink(-DrinkValue, -DrinkValue);
+            state.SoberUp(DrinkValue, DrinkValue * 0.5f);
         }
     }
 }
