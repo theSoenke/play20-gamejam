@@ -60,6 +60,8 @@ public class GameStateManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(this.gameObject);
 
+        AudioListener.volume = PlayerSettings.MasterVolume;
+
         Actions = GetComponentsInChildren<ActionDescription>();
         Phase = GamePhase.CalculatingActions;
     }

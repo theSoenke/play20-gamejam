@@ -1458,8 +1458,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 9894cd548d1775340ba5a56dd98a2800, type: 2}
-  warp: 0.02
-  blur: 0.004
+  Warp: 0.02
+  Blur: 0.004
+  DrunkLevelWeight:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.7357691
+      value: 0.10762335
+      inSlope: 0.48133656
+      outSlope: 0.48133656
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.56592005
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 4.6091695
+      outSlope: 4.6091695
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.110383146
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  DrunkLevelScale: 60
 --- !u!82 &1620091827
 AudioSource:
   m_ObjectHideFlags: 0
