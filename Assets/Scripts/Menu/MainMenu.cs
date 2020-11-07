@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject ExitDialogRoot;
     public SceneField Scene;
+    public SceneField SettingsScene;
 
     void Awake()
     {
@@ -19,6 +20,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(Scene.SceneName);
     }
 
+    public void SettingsClicked()
+    {
+        SceneManager.LoadScene(SettingsScene.SceneName);
+    }
+
     public void CreditsClicked()
     {
     }
@@ -28,6 +34,7 @@ public class MainMenu : MonoBehaviour
         ExitDialogRoot.SetActive(true);        
     }
 
+   
     public void ExitDialogResult(bool result)
     {
         ExitDialogRoot.SetActive(false);
