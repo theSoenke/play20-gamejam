@@ -9,11 +9,26 @@ class ActionWithCachedPropability
     public int ActionPropability {get; protected set;}
 }
 
+public enum GamePhase 
+{
+    CalculatingActions,
+    WaitingForSelection,
+    ExecutingAction,
+    PhaseComplete
+}
+
 public class GameStateManager : MonoBehaviour
 {
     public GameState State;
 
     public ActionDescription[] Actions;
+
+    public GamePhase Phase {get; protected set;} = GamePhase.CalculatingActions;
+
+    public void Awake() 
+    {
+        Actions = GetComponentsInChildren<ActionDescription>();
+    }
 
     public void UpdateGame()
     {
