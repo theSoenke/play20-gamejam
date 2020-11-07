@@ -1,15 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class DrinkAnimation : ActionAnimation
 {
-    public Transform Ken;
+    public NavMeshAgent Ken;
     public Transform DrinkTarget;
-    public float AnimationDuration = 2;
-
-    private Vector3 _kenStartPosition;
-    private float _animationStartTs;
 
     public void Start()
     {
@@ -20,10 +17,8 @@ public class DrinkAnimation : ActionAnimation
     {
         if (IsRunning)
         {
-            Ken.rotation = DrinkTarget.rotation;
-            var animationProgress = Mathf.Min((Time.time - _animationStartTs) / AnimationDuration, 1);
-            Ken.position = Vector3.Lerp(_kenStartPosition, DrinkTarget.position, animationProgress);
-            if(animationProgress == 1) {
+            if(Vector3.Distance(Ken.transform.position, DrinkTarget.position) < 0.2) {
+                Ken.enabled = false;
                 IsRunning = false;
             }
         }
@@ -33,8 +28,8 @@ public class DrinkAnimation : ActionAnimation
     public override void RunAnimation(GameState state)
     {
         IsRunning = true;
-        _kenStartPosition = Ken.position;
-        _animationStartTs = Time.time;
+        Ken.SetDestination(DrinkTarget.position);
+        Ken.enabled = true;
     }
 
     private void OnPhaseChanged(GamePhase phase)
