@@ -35,6 +35,6 @@ public class PukeAction : ActionDescription
     public override void Execute(GameState state)
     {
         state.SusAdd(SusValue);
-        state.Drink(-DrunkValue);
+        state.Drink(-DrunkValue, -DrunkValue);
     }   
 }

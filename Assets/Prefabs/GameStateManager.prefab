@@ -404,20 +404,24 @@ PrefabInstance:
       propertyPath: Animation
       value: 
       objectReference: {fileID: 1464809871}
+    - target: {fileID: 4679952657424781227, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
+      propertyPath: PeeLevelFactor
+      value: 0.17
+      objectReference: {fileID: 0}
     - target: {fileID: 8609143790390159665, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
       propertyPath: m_Name
       value: Toilet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
---- !u!1 &3659794874172199270 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8609143790390159665, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
-  m_PrefabInstance: {fileID: 5022611611020654679}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6230180181794128254 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1424805973849536809, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
+  m_PrefabInstance: {fileID: 5022611611020654679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3659794874172199270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8609143790390159665, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
   m_PrefabInstance: {fileID: 5022611611020654679}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5022611612141059346

@@ -1,6 +1,7 @@
 ﻿public class DrinkAction : ActionDescription
 {
-    public float DrinkValue = 2f;
+    public float DrinkStrengthValue = 2f;
+    public float DrinkVolumeValue = 4f;
     public float SusValue = 2f;
 
     private void Awake()
@@ -14,12 +15,12 @@
         {
             return 0;
         }
-        return 100;
+        return 10;
     }
 
     public override void Execute(GameState state)
     {
-        state.Drink(DrinkValue);
+        state.Drink(DrinkStrengthValue, DrinkVolumeValue);
         state.SusAdd(SusValue);
     }
 

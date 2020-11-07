@@ -22,12 +22,14 @@ public class GameState : MonoBehaviour
         Time += UnityEngine.Time.deltaTime;
     }
 
-    public void Drink(float value)
+    public void Drink(float strength, float volume)
     {
-        Drunk += value;
+        Drunk += strength;
         Drunk = Mathf.Max(Drunk, 0);
+
         Drinks++;
-        // TODO: Add Pee/PunkeLikeless Value etc.
+
+        PeeLevel += volume;
     }
 
     public void SusAdd(float value)
