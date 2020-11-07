@@ -15,45 +15,112 @@ public enum GamePhase
     CalculatingActions,
     WaitingForSelection,
     ExecutingAction,
+    AnimatingAction,
     PhaseComplete
 }
 
 public class GameStateManager : MonoBehaviour
 {
+    public static GameStateManager Instance { get; private set; }
+
+    private GamePhase _phase;
+    private ActionDescription _currentAction;
+
+    [SerializeField]
+    private ActionDescription[] Actions;
+
     public GameState State;
-
-    public ActionDescription[] Actions;
-
-    public GamePhase Phase { get; protected set; } = GamePhase.CalculatingActions;
-
-
-    public void Awake()
-    {
-        Actions = GetComponentsInChildren<ActionDescription>();
+    public ActionDescription[] ActionsForSelection;
+    public event Action<GamePhase> GamePhaseChanged;
+    public GamePhase Phase 
+    { 
+        get => _phase; 
+        protected set
+        {
+            if (_phase == value)
+                return;
+            _phase = value;
+            GamePhaseChanged?.Invoke(_phase);
+        }
     }
 
-    public void UpdateGame()
+
+    private void Awake()
     {
-        var actions = SelectActionsViaProbability(State);
-        // Display actions
-        foreach (var item in actions)
+        if(Instance != null && Instance != this)
         {
-            //DrawText(item.GetDescription());
-            //IsClicked? -> SelectedAction
+            Debug.LogError("GameStateManager already exists in Scene. Deleting...");
+            Destroy(this);
+            return;
         }
 
-        // SelectedAction.Execute(State);
-        // SelectedAction.Animation.RunAnimation(State);
-        // WaitFor(() => SelectedAction.Animation.IsRunning == false);
-        // Run UpdateGame() next frame;
+        Instance = this;
+        DontDestroyOnLoad(this.gameObject);
+
+        Actions = GetComponentsInChildren<ActionDescription>();
+        Phase = GamePhase.CalculatingActions;
     }
 
-    public void RunAction(ActionDescription action)
+    private void Update()
+    {
+        switch (Phase)
+        {
+            case GamePhase.CalculatingActions:
+                ActionsForSelection = SelectActionsViaProbability(State).ToArray();
+                Phase = GamePhase.WaitingForSelection;
+                break;           
+            case GamePhase.AnimatingAction:
+                if (_currentAction.Animation == null || !_currentAction.Animation.IsRunning)
+                {
+                    _currentAction = null;
+                    Phase = GamePhase.PhaseComplete;
+                }
+                break;
+            case GamePhase.PhaseComplete:
+                Phase = GamePhase.CalculatingActions;
+                break;
+        }
+    }
+
+    public void SelectAction(ActionDescription action)
+    {
+        if(Phase != GamePhase.WaitingForSelection)
+        {
+            Debug.LogError("Try selecting action while not in waiting phase..");
+            return;
+        }
+
+        _currentAction = action;
+        Phase = GamePhase.ExecutingAction;
+
+        _currentAction.Execute(State);
+
+        Phase = GamePhase.AnimatingAction;
+        _currentAction.Animation?.RunAnimation(State);
+    }
+
+    //public void UpdateGame()
+    //{
+    //    var actions = SelectActionsViaProbability(State);
+    //    // Display actions
+    //    foreach (var item in actions)
+    //    {
+    //        //DrawText(item.GetDescription());
+    //        //IsClicked? -> SelectedAction
+    //    }
+
+    //    // SelectedAction.Execute(State);
+    //    // SelectedAction.Animation.RunAnimation(State);
+    //    // WaitFor(() => SelectedAction.Animation.IsRunning == false);
+    //    // Run UpdateGame() next frame;
+    //}
+
+    private void RunAction(ActionDescription action)
     {
         action.Execute(State);
     }
 
-    public IEnumerable<ActionDescription> SelectActionsViaProbability(GameState state)
+    private IEnumerable<ActionDescription> SelectActionsViaProbability(GameState state)
     {
         var cachedActionList = new List<ActionWithCachedPropability>();
         var totalProbability = 0;
@@ -79,4 +146,6 @@ public class GameStateManager : MonoBehaviour
         }
         return result;
     }
+
+
 }

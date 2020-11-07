@@ -24,6 +24,6 @@ public class PissActiom: ActionDescription
 
     public override string Description()
     {
-        return "Oh, look at this nice piece of alcohol!";
+        return "Oh have to take a piss so badly..";
     }
 }
