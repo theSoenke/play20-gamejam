@@ -22,7 +22,7 @@ public class DrinkAction : ActionDescription
         state.Drink(DrinkValue);       
     }
 
-    public override string Description()
+    public override string Description(GameState state)
     {
         return "Oh, look at this nice piece of alcohol!";
     }
