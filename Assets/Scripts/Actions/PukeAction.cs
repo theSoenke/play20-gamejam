@@ -1,15 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PukeAction : ActionDescription
 {
     public float SusValue = 10f;
     public float DrunkValue = 2f;
 
-    public override string Description()
+    public override string Description(GameState state)
     {
-        return "I feel sick, i think i must throw up..";
+        if (state.Drunk < 0.9f)
+        {
+            return "I feel sick, I think I have to throw up..";
+        }
+        else
+        {
+            return "BBBLLLAAARRGGGHHH!!!";
+        }
     }
 
     public override int EvaluateProbability(GameState state)
@@ -26,6 +31,5 @@ public class PukeAction : ActionDescription
     {
         state.SusAdd(SusValue);
         state.Drink(-DrunkValue);
-
     }   
 }

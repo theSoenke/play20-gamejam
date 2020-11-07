@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class ActionDescription : MonoBehaviour
 {
     public ActionAnimation Animation;
-    public abstract string Description();
+    public abstract string Description(GameState state);
     public abstract int EvaluateProbability(GameState state);
     public abstract void Execute(GameState state);  
     

@@ -22,8 +22,14 @@ public class PissActiom: ActionDescription
         state.PissReset();  
     }
 
-    public override string Description()
+    public override string Description(GameState state)
     {
-        return "Oh have to take a piss so badly..";
+        if(state.Drunk == 0)
+        {
+            return "I better get to the toilet soon";
+        } else
+        {
+            return "Oh, I have to take a piss so badly..";
+        }
     }
 }

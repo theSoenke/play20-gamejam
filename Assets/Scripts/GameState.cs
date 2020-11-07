@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
     public float Drunk { get; protected set; }
     public float Sus { get; protected set; }
-    public float PissRounds { get; protected set; }
+    public float PeeLevel { get; protected set; }
 
 
     public void Drink(float value)
@@ -23,6 +21,6 @@ public class GameState : MonoBehaviour
 
     public void PissReset()
     {
-       PissRounds = 0f;     
+       PeeLevel = 0f;     
     }
 }
