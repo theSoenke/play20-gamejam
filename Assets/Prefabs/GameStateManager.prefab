@@ -16,6 +16,22 @@ MonoBehaviour:
   DrinkTarget: {fileID: 0}
   KenAudio: {fileID: 0}
   DrinkBeerClip: {fileID: 8300000, guid: 0c1553adaa2245b8db966be9a77339d3, type: 3}
+--- !u!114 &1464809871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3659794874172199270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa6fae860eebdc28ada8ac2dfe272cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ken: {fileID: 0}
+  ToiletTarget: {fileID: 0}
+  KenAudio: {fileID: 0}
+  ToiletClip: {fileID: 8300000, guid: 370aab1875842cb438ccd541dd3801a1, type: 3}
 --- !u!1 &5022611612069798261
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,12 +210,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4679952657424781227, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
+      propertyPath: Animation
+      value: 
+      objectReference: {fileID: 1464809871}
     - target: {fileID: 8609143790390159665, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
       propertyPath: m_Name
-      value: TakeAPiss
+      value: Toilet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
+--- !u!1 &3659794874172199270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8609143790390159665, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
+  m_PrefabInstance: {fileID: 5022611611020654679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6230180181794128254 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1424805973849536809, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}

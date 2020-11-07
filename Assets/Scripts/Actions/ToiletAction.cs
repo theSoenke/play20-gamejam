@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PissAction: ActionDescription
+﻿public class ToiletAction: ActionDescription
 {
     public float SusValue = 10f;
 
