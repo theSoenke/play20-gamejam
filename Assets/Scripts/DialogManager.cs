@@ -4,12 +4,34 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     public GameStateManager gameStateManager;
-    public Button[] buttons;
+    public GameObject dialogView;
+    private Button[] buttons;
+
 
     void Start()
     {
-        var actions = gameStateManager.Actions;
+        buttons = dialogView.GetComponents<Button>();
+    }
 
+    void Update()
+    {
+        switch (GamePhase.WaitingForSelection)
+        {
+            case GamePhase.WaitingForSelection:
+                dialogView.SetActive(true);
+                UpdateSelection();
+                break;
+            case GamePhase.ExecutingAction:
+            case GamePhase.CalculatingActions:
+                dialogView.SetActive(false);
+                break;
+            default:
+        }
+    }
+
+    private void UpdateSelection()
+    {
+        var actions = gameStateManager.Actions;
         if (actions.Length < buttons.Length)
         {
             Debug.LogError("Gimme some actions");
@@ -19,8 +41,13 @@ public class DialogManager : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)
         {
             var button = buttons[i];
+            var action = actions[i];
             var text = button.GetComponentInChildren<Text>();
-            text.text = actions[i].Description();
+            text.text = action.Description();
+            button.onClick.AddListener(() =>
+            {
+                gameStateManager.RunAction(action);
+            });
         }
     }
 }

@@ -46,6 +46,11 @@ public class GameStateManager : MonoBehaviour
         // Run UpdateGame() next frame;
     }
 
+    public void RunAction(ActionDescription action)
+    {
+        action.Execute(State);
+    }
+
     public IEnumerable<ActionDescription> SelectActionsViaProbability(GameState state)
     {
         return new ActionDescription[]{Actions[0], Actions[0], Actions[1], Actions[2]};
