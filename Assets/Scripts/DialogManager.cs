@@ -10,7 +10,8 @@ public class DialogManager : MonoBehaviour
 
     void Start()
     {
-        buttons = dialogView.GetComponents<Button>();
+        buttons = dialogView.GetComponentsInChildren<Button>();
+        dialogView.SetActive(false);
     }
 
     void Update()
@@ -21,11 +22,8 @@ public class DialogManager : MonoBehaviour
                 dialogView.SetActive(true);
                 UpdateSelection();
                 break;
-            case GamePhase.ExecutingAction:
-            case GamePhase.CalculatingActions:
-                dialogView.SetActive(false);
-                break;
             default:
+                dialogView.SetActive(false);
         }
     }
 
