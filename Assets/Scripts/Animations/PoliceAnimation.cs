@@ -14,7 +14,6 @@ public class PoliceAnimation : ActionAnimation
             {
                 KenAudio.clip = PoliceClip;
                 KenAudio.Play();
-                IsRunning = false;
             }
             if (!KenAudio.isPlaying)
             {
