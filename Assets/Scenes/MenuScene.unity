@@ -319,8 +319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExitDialogRoot: {fileID: 1659949437}
   Scene:
-    m_SceneAsset: {fileID: 102900000, guid: 4b1cb0c5672ccb56bb54f04a6793b486, type: 3}
-    m_SceneName: MainScene
+    m_SceneAsset: {fileID: 102900000, guid: e75d37bf3d9022445b7cd3c17e55c8ad, type: 3}
+    m_SceneName: StartScene
 --- !u!1 &243211007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,7 +1581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1659949438
 RectTransform:
   m_ObjectHideFlags: 0
