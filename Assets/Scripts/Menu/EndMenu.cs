@@ -15,7 +15,8 @@ public class EndMenu : MonoBehaviour
     {
         ClearEntries();
         AddStatsEntry("Time played", GetTimeFormat(GameStateManager.Instance.State.Time));
-        AddStatsEntry("Drunk", GameStateManager.Instance.State.Drunk.ToString("0"));
+        AddStatsEntry("Drinks", GameStateManager.Instance.State.Drinks.ToString("0"));
+        AddStatsEntry("Promille", (GameStateManager.Instance.State.Drunk / 100f * 3f).ToString("0.0")+ "‰");
         AddStatsEntry("Suspicious", GameStateManager.Instance.State.Sus.ToString("0"));
     }
 

@@ -10,6 +10,8 @@ public class GameState : MonoBehaviour
     public bool IsInside { get; protected set; }
     public bool IsGameOver { get; protected set;}
 
+    public int Drinks { get; protected set; }
+
     private void Start()
     {
         ResetState();
@@ -24,6 +26,7 @@ public class GameState : MonoBehaviour
     {
         Drunk += value;
         Drunk = Mathf.Max(Drunk, 0);
+        Drinks++;
         // TODO: Add Pee/PunkeLikeless Value etc.
     }
 
