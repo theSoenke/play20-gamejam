@@ -16,6 +16,22 @@ MonoBehaviour:
   DrinkTarget: {fileID: 0}
   KenAudio: {fileID: 0}
   DrinkBeerClip: {fileID: 8300000, guid: 0c1553adaa2245b8db966be9a77339d3, type: 3}
+--- !u!114 &5022611610345284818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2577996926531888196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2895154165a087fa291f4ba706a69eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ken: {fileID: 0}
+  PukeTarget: {fileID: 0}
+  KenAudio: {fileID: 0}
+  PukeClip: {fileID: 8300000, guid: 91bc4934e535a4b12b22e27c1aaa713f, type: 3}
 --- !u!114 &1464809871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,6 +48,20 @@ MonoBehaviour:
   ToiletTarget: {fileID: 0}
   KenAudio: {fileID: 0}
   ToiletClip: {fileID: 8300000, guid: 370aab1875842cb438ccd541dd3801a1, type: 3}
+--- !u!114 &5022611610345284816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3985091791702933175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28fcee5c8b6a5f41a1397ad0954c6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KenAudio: {fileID: 0}
+  PoliceClip: {fileID: 8300000, guid: 991b1c586710bb54e827ac39ba6712eb, type: 3}
 --- !u!1 &5022611612069798261
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +139,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5022611612069798256}
     m_Modifications:
+    - target: {fileID: 3491233032198920930, guid: 3f3738c5223ce2845a746bd1660faf9d, type: 3}
+      propertyPath: Animation
+      value: 
+      objectReference: {fileID: 5022611610345284818}
     - target: {fileID: 3654992130011747667, guid: 3f3738c5223ce2845a746bd1660faf9d, type: 3}
       propertyPath: m_Name
       value: PukePot
@@ -159,6 +193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f3738c5223ce2845a746bd1660faf9d, type: 3}
+--- !u!1 &2577996926531888196 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3654992130011747667, guid: 3f3738c5223ce2845a746bd1660faf9d, type: 3}
+  m_PrefabInstance: {fileID: 1260939114241962263}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4674493650257290393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5881949898448704910, guid: 3f3738c5223ce2845a746bd1660faf9d, type: 3}
@@ -175,6 +214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PoliceArrives
       objectReference: {fileID: 0}
+    - target: {fileID: 8221559445383215489, guid: 08d6c0ce913644d44ac67bac8e0a5725, type: 3}
+      propertyPath: Animation
+      value: 
+      objectReference: {fileID: 5022611610345284816}
     - target: {fileID: 8487020335311941953, guid: 08d6c0ce913644d44ac67bac8e0a5725, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -224,6 +267,11 @@ PrefabInstance:
 --- !u!4 &7497077754069152227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8487020335311941953, guid: 08d6c0ce913644d44ac67bac8e0a5725, type: 3}
+  m_PrefabInstance: {fileID: 2147386308455989410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3985091791702933175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3062711246056439317, guid: 08d6c0ce913644d44ac67bac8e0a5725, type: 3}
   m_PrefabInstance: {fileID: 2147386308455989410}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2600958970957734276
@@ -477,14 +525,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
---- !u!4 &6230180181794128254 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1424805973849536809, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
-  m_PrefabInstance: {fileID: 5022611611020654679}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3659794874172199270 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8609143790390159665, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
+  m_PrefabInstance: {fileID: 5022611611020654679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6230180181794128254 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1424805973849536809, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
   m_PrefabInstance: {fileID: 5022611611020654679}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5022611612141059346
