@@ -3,9 +3,11 @@
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "black" {}
+		_Warp ("Warp", Float) = 0.02
+		_Blur ("Blur", Float) = 0.004
 	}
 	Subshader
-	{
+	{		
 		Pass
 		{
 			CGPROGRAM
@@ -14,6 +16,8 @@
 			#pragma target 2.0
 
 			sampler2D _MainTex;
+			float _Warp;
+			float _Blur;
 
 			float4 vertex_shader (float4 vertex:POSITION):SV_POSITION
 			{
@@ -24,9 +28,9 @@
 			{
 				vector <float,2> uv = vertex.xy/_ScreenParams.xy;
 				uv.y = 1-uv.y;
-				uv.x+=cos(uv.y*2.0+_Time.g)*0.02;
-				uv.y+=sin(uv.x*2.0+_Time.g)*0.02;
-				float offset = sin(_Time.g *0.5) * 0.004;    
+				uv.x+=cos(uv.y*2.0+_Time.g) * _Warp;
+				uv.y+=sin(uv.x*2.0+_Time.g) * _Warp;
+				float offset = sin(_Time.g *0.5) * _Blur;    
 				float4 a = tex2D(_MainTex,uv);    
 				float4 b = tex2D(_MainTex,uv-float2(sin(offset),0.0));    
 				float4 c = tex2D(_MainTex,uv+float2(sin(offset),0.0));    
