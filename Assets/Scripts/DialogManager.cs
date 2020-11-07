@@ -30,8 +30,8 @@ public class DialogManager : MonoBehaviour
 
     private void UpdateSelection()
     {
-        var actions = gameStateManager.SelectActionsViaProbability(gameStateManager.State).ToArray<ActionDescription>();
-        if (actions.Length < buttons.Length)
+        var actions = gameStateManager.SelectActionsViaProbability(gameStateManager.State).ToList();
+        if (actions.Count < buttons.Length)
         {
             Debug.LogError("Gimme some actions");
             return;
