@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5881949898448704910}
   - component: {fileID: 3491233032198920930}
+  - component: {fileID: -7680018487864784529}
   m_Layer: 0
   m_Name: PukePot
   m_TagString: Untagged
@@ -43,6 +44,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6489ce73b63d244cbe39348c7786fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animation: {fileID: 0}
+  Animation: {fileID: -7680018487864784529}
   SusValue: 10
   DrunkValue: 2
+--- !u!114 &-7680018487864784529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3654992130011747667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2895154165a087fa291f4ba706a69eb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ken: {fileID: 0}
+  PukeTarget: {fileID: 0}
+  KenAudio: {fileID: 0}
+  PukeClip: {fileID: 8300000, guid: 91bc4934e535a4b12b22e27c1aaa713f, type: 3}

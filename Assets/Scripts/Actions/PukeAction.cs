@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PukeToiletAction : ActionDescription
+public class PukeAction : ActionDescription
 {
     public float SusValue = 10f;
     public float DrunkValue = 2f;

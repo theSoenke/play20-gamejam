@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PukeToiletAnimation : ActionAnimation
+public class PukeAnimation : ActionAnimation
 {
 
     public NavMeshAgent Ken;
