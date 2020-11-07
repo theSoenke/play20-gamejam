@@ -1,6 +1,10 @@
-﻿public class ToiletAction: ActionDescription
+﻿using UnityEngine;
+
+public class ToiletAction: ActionDescription
 {
     public float SusValue = 10f;
+
+    public float PeeLevelFactor = 1f;
 
     private void Awake()
     {
@@ -9,7 +13,11 @@
 
     public override int EvaluateProbability(GameState state)
     {
-        return 100;
+        if (!state.IsInside)
+        {
+            return 0;
+        }
+        return Mathf.RoundToInt(state.PeeLevel * 2 * PeeLevelFactor);
     }
 
     public override void Execute(GameState state)

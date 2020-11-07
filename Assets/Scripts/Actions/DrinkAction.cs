@@ -1,6 +1,7 @@
 ﻿public class DrinkAction : ActionDescription
 {
     public float DrinkValue = 2f;
+    public float SusValue = 2f;
 
     private void Awake()
     {
@@ -9,12 +10,17 @@
 
     public override int EvaluateProbability(GameState state)
     {
+        if (!state.IsInside)
+        {
+            return 0;
+        }
         return 100;
     }
 
     public override void Execute(GameState state)
     {
-        state.Drink(DrinkValue);       
+        state.Drink(DrinkValue);
+        state.SusAdd(SusValue);
     }
 
     public override string Description(GameState state)

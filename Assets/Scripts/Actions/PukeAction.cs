@@ -19,6 +19,11 @@ public class PukeAction : ActionDescription
 
     public override int EvaluateProbability(GameState state)
     {
+        if (!state.IsInside)
+        {
+            return 0;
+        }
+
         if(state.Drunk > 60)
         {
             return Mathf.RoundToInt((state.Drunk-60f) / 40.0f * 500);
