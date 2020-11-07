@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1637734918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885799816933761920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489db63a72c57fd14a60ba1e9336126b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ken: {fileID: 0}
+  DrinkTarget: {fileID: 0}
+  AnimationDuration: 2
 --- !u!1 &5022611612069798261
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,21 +77,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d2b43682b040a4aac4b769094e41a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1637734918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885799816933761920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 489db63a72c57fd14a60ba1e9336126b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ken: {fileID: 0}
-  DrinkTarget: {fileID: 0}
-  AnimationDuration: 2
 --- !u!1001 &5022611610128683138
 PrefabInstance:
   m_ObjectHideFlags: 0

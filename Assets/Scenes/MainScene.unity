@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.17
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.05666667
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: ff79fe3ed7514c6ae9e6557735091b47, type: 2}
 --- !u!1 &177913757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,9 +1437,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 56.946, y: 0, z: 0}
---- !u!4 &1849131624 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 576746131012081093, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
+--- !u!195 &1849131625 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 1849131625, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
   m_PrefabInstance: {fileID: 576746129370765229}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1893844449
@@ -1951,7 +1951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 576746131012081093, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.01
       objectReference: {fileID: 0}
     - target: {fileID: 576746131012081093, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1959,7 +1959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 576746131012081093, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 4.73
       objectReference: {fileID: 0}
     - target: {fileID: 576746131012081093, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2005,7 +2005,7 @@ PrefabInstance:
     - target: {fileID: 1637734918, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
       propertyPath: Ken
       value: 
-      objectReference: {fileID: 1849131624}
+      objectReference: {fileID: 1849131625}
     - target: {fileID: 1637734918, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
       propertyPath: DrinkTarget
       value: 
@@ -2114,6 +2114,14 @@ PrefabInstance:
     - target: {fileID: 6384629750393536164, guid: ae1ce796dd20211d4bb7d7fdc2634a73, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404220050080187901, guid: ae1ce796dd20211d4bb7d7fdc2634a73, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404220050080187901, guid: ae1ce796dd20211d4bb7d7fdc2634a73, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae1ce796dd20211d4bb7d7fdc2634a73, type: 3}
