@@ -12,7 +12,8 @@ public class DebugShowGameState : MonoBehaviour
 
     void Start()
     {
-        GameStateManager.Instance.GamePhaseChanged += OnGamePhaseChanged;
+        //GameStateManager.Instance.GamePhaseChanged += OnGamePhaseChanged;
+        gameObject.SetActive(false);
     }
 
     private void OnGamePhaseChanged(GamePhase phase)
