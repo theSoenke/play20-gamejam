@@ -8,6 +8,7 @@ public class DanceAction : ActionDescription
     //public float DrinkValue = 2f;
     public Amounts SusValue;
     public Amounts DrinkValue;
+    public float PropabilityFactor = 0.025f;
 
     public override string Description(GameState state)
     {
@@ -41,7 +42,7 @@ public class DanceAction : ActionDescription
 
         //return 2;
         //if()
-        return ProbabilityHelper.CalcWithMinimum(state.Drunk, 20, GameStateManager.Instance.Balancing.DrunkMax, GameStateManager.Instance.Balancing.ProbabilityMax * 0.25f);
+        return ProbabilityHelper.CalcWithMinimum(state.Drunk, 15, GameStateManager.Instance.Balancing.DrunkMax * 0.5f, GameStateManager.Instance.Balancing.ProbabilityMax * PropabilityFactor);
             //Mathf.RoundToInt((state.Drunk / GameStateManager.Instance.Balancing.DrunkMax) * GameStateManager.Instance.Balancing.ProbabilityMax;
     }
 

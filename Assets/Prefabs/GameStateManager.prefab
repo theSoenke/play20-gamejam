@@ -799,6 +799,10 @@ PrefabInstance:
       propertyPath: SuspicionValue
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2459328592721759890, guid: 9cab6965128d361428d9df11fdd56908, type: 3}
+      propertyPath: PropabilityFactor
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 4455970797816929852, guid: 9cab6965128d361428d9df11fdd56908, type: 3}
       propertyPath: m_Name
       value: Dance
@@ -1158,6 +1162,14 @@ PrefabInstance:
     - target: {fileID: 3895860505285245655, guid: be0b0343e629c3f4681de4db6bb4a7cb, type: 3}
       propertyPath: MinPeeLevel
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3895860505285245655, guid: be0b0343e629c3f4681de4db6bb4a7cb, type: 3}
+      propertyPath: PeeMaxLevelFactor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3895860505285245655, guid: be0b0343e629c3f4681de4db6bb4a7cb, type: 3}
+      propertyPath: PeeProbabilityFactor
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be0b0343e629c3f4681de4db6bb4a7cb, type: 3}
