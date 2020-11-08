@@ -8,7 +8,7 @@ public class TalkIn : ActionDescription
 
     public override string Description(GameState state)
     {
-        return "Hi, Marry invited me.";
+        return RandomString.Select("Hi, Marry invited me.", "I am thee +1 from Karren", "Shure i am invited");
     }
 
     public override int EvaluateProbability(GameState state)
