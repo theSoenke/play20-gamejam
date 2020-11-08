@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6784830152496486409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920069597024167432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489db63a72c57fd14a60ba1e9336126b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ken: {fileID: 0}
+  DrinkTarget: {fileID: 0}
+  KenAudio: {fileID: 0}
+  DrinkBeerClip: {fileID: 8300000, guid: 0c1553adaa2245b8db966be9a77339d3, type: 3}
 --- !u!114 &1637734918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,10 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animation: {fileID: 5022611610345284818}
-  SusValue: 10
-  DrunkValue: 2
   PukeThreshold: 75
   PukeFactor: 1.3
+  SusValue: 2
+  DrunkValue: 1
 --- !u!114 &5022611610345284818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +99,22 @@ MonoBehaviour:
   KenAudio: {fileID: 0}
   SmashClip: {fileID: 8300000, guid: 6c0246486721b4113a80ef1d56ed85d0, type: 3}
   WindowPosition: {fileID: 0}
+--- !u!114 &53119270490084918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615807389472670891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489db63a72c57fd14a60ba1e9336126b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ken: {fileID: 0}
+  DrinkTarget: {fileID: 0}
+  KenAudio: {fileID: 0}
+  DrinkBeerClip: {fileID: 8300000, guid: 0c1553adaa2245b8db966be9a77339d3, type: 3}
 --- !u!114 &1464809871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +156,7 @@ GameObject:
   - component: {fileID: 5022611612069798256}
   - component: {fileID: 5022611612069798259}
   - component: {fileID: 5022611612069798258}
+  - component: {fileID: 3526484595891688730}
   m_Layer: 0
   m_Name: GameStateManager
   m_TagString: Untagged
@@ -152,6 +185,8 @@ Transform:
   - {fileID: 6230180181794128254}
   - {fileID: 4366746669215230307}
   - {fileID: 5022611610561560634}
+  - {fileID: 1729280236016862172}
+  - {fileID: 2960818734771528063}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -172,6 +207,7 @@ MonoBehaviour:
     m_SceneAsset: {fileID: 102900000, guid: a5ec3c9a9e05f104f943b7f66114b289, type: 3}
     m_SceneName: EndScene
   State: {fileID: 5022611612069798258}
+  Balancing: {fileID: 3526484595891688730}
   ActionsForSelection: []
 --- !u!114 &5022611612069798258
 MonoBehaviour:
@@ -185,6 +221,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d2b43682b040a4aac4b769094e41a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3526484595891688730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5022611612069798261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41433edf435578948b7707413546a161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SmallAmount: 5
+  MediumAmount: 10
+  BigAmount: 15
 --- !u!1001 &1260939114241962263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -389,14 +440,14 @@ PrefabInstance:
       objectReference: {fileID: 209243080}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcf4cce50367e3243ad228efc944b7ca, type: 3}
---- !u!4 &3668024936545594231 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1657051269839063795, guid: bcf4cce50367e3243ad228efc944b7ca, type: 3}
-  m_PrefabInstance: {fileID: 2600958970957734276}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2844016565949764190 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 247574391008670682, guid: bcf4cce50367e3243ad228efc944b7ca, type: 3}
+  m_PrefabInstance: {fileID: 2600958970957734276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3668024936545594231 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1657051269839063795, guid: bcf4cce50367e3243ad228efc944b7ca, type: 3}
   m_PrefabInstance: {fileID: 2600958970957734276}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4627481897716012608
@@ -468,6 +519,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5022611612069798256}
     m_Modifications:
+    - target: {fileID: 1793978354563442047, guid: 1bd205d28931c4341b7f883916b8a489, type: 3}
+      propertyPath: SusValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793978354563442047, guid: 1bd205d28931c4341b7f883916b8a489, type: 3}
+      propertyPath: DrunkValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1793978354563442047, guid: 1bd205d28931c4341b7f883916b8a489, type: 3}
       propertyPath: PukeFactor
       value: 0.75
@@ -583,6 +642,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4679952657424781227, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
+      propertyPath: SusValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679952657424781227, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
       propertyPath: Animation
       value: 
       objectReference: {fileID: 1464809871}
@@ -615,7 +678,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6888346165150883474, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
       propertyPath: m_Name
-      value: Drink
+      value: DrinkBeer
       objectReference: {fileID: 0}
     - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
       propertyPath: Animation
@@ -626,12 +689,24 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: DrinkVolume
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
       propertyPath: DrinkVolumeValue
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
       propertyPath: DrinkStrengthValue
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.data[0]
+      value: Quick, a beer!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.data[2]
+      value: Let's grab a cold one!
       objectReference: {fileID: 0}
     - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
       propertyPath: m_RootOrder
@@ -698,7 +773,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2459328592721759890, guid: 9cab6965128d361428d9df11fdd56908, type: 3}
       propertyPath: DrinkValue
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2459328592721759890, guid: 9cab6965128d361428d9df11fdd56908, type: 3}
       propertyPath: SuspicionValue
@@ -758,6 +833,240 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8444936997875230250, guid: 9cab6965128d361428d9df11fdd56908, type: 3}
   m_PrefabInstance: {fileID: 5308544949654490953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6006935741907417242
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5022611612069798256}
+    m_Modifications:
+    - target: {fileID: 6888346165150883474, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_Name
+      value: DrinkLongdrink
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: SusValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Animation
+      value: 
+      objectReference: {fileID: 6784830152496486409}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: DrinkValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: DrinkVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: DrinkStrength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: DrinkVolumeValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: DrinkStrengthValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.data[0]
+      value: I could really use a drink
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.data[1]
+      value: I want a drink right now!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.data[2]
+      value: Let's mix it up, get me a drink!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.data[3]
+      value: Vodka and Energy, it's simple as that
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.data[4]
+      value: Gin and Tonic, it's simple as that
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.data[5]
+      value: Rum and Cola, it's simple as that
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+--- !u!1 &920069597024167432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6888346165150883474, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+  m_PrefabInstance: {fileID: 6006935741907417242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2960818734771528063 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+  m_PrefabInstance: {fileID: 6006935741907417242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7905435820817799737
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5022611612069798256}
+    m_Modifications:
+    - target: {fileID: 6888346165150883474, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_Name
+      value: DrinkShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: SusValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Animation
+      value: 
+      objectReference: {fileID: 53119270490084918}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: DrinkValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: DrinkStrength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: DrinkVolumeValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: DrinkStrengthValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.data[1]
+      value: Shots!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.data[2]
+      value: Shots Shots Shots!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.data[3]
+      value: Without a shot i get nowhere..
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: Descriptions.Array.data[4]
+      value: One shot please!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+--- !u!1 &3615807389472670891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6888346165150883474, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+  m_PrefabInstance: {fileID: 7905435820817799737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1729280236016862172 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8811887270226156005, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+  m_PrefabInstance: {fileID: 7905435820817799737}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8332511273573317359
 PrefabInstance:
@@ -890,13 +1199,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6feff8d03cb19074090d1de449ce198d, type: 3}
---- !u!4 &1318334284322599418 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7941807571727767033, guid: 6feff8d03cb19074090d1de449ce198d, type: 3}
-  m_PrefabInstance: {fileID: 8970429263590401027}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2863685261554327938 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6611433176145626497, guid: 6feff8d03cb19074090d1de449ce198d, type: 3}
+  m_PrefabInstance: {fileID: 8970429263590401027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1318334284322599418 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7941807571727767033, guid: 6feff8d03cb19074090d1de449ce198d, type: 3}
   m_PrefabInstance: {fileID: 8970429263590401027}
   m_PrefabAsset: {fileID: 0}
