@@ -1250,6 +1250,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boxen
       objectReference: {fileID: 0}
+    - target: {fileID: 7963072116047291269, guid: 27705c62c453f6fba89e8abbe05f1dae, type: 3}
+      propertyPath: MusicSource
+      value: 
+      objectReference: {fileID: 1620091827}
     - target: {fileID: 8406126996000997842, guid: 27705c62c453f6fba89e8abbe05f1dae, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -3314,6 +3318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boxen (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7963072116047291269, guid: 27705c62c453f6fba89e8abbe05f1dae, type: 3}
+      propertyPath: MusicSource
+      value: 
+      objectReference: {fileID: 1620091827}
     - target: {fileID: 8406126996000997842, guid: 27705c62c453f6fba89e8abbe05f1dae, type: 3}
       propertyPath: m_RootOrder
       value: 18
