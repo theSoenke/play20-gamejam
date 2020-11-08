@@ -41,7 +41,7 @@ public class DanceAction : ActionDescription
 
         //return 2;
         //if()
-        return ProbabilityHelper.CalcWithMinimum(state.Drunk, 20, GameStateManager.Instance.Balancing.DrunkMax, GameStateManager.Instance.Balancing.ProbabilityMax * 0.5f);
+        return ProbabilityHelper.CalcWithMinimum(state.Drunk, 20, GameStateManager.Instance.Balancing.DrunkMax, GameStateManager.Instance.Balancing.ProbabilityMax * 0.25f);
             //Mathf.RoundToInt((state.Drunk / GameStateManager.Instance.Balancing.DrunkMax) * GameStateManager.Instance.Balancing.ProbabilityMax;
     }
 

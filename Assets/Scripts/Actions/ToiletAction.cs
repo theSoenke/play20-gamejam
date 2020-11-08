@@ -5,7 +5,9 @@ public class ToiletAction: ActionDescription
     //public float SusValue = 10f;
     public Amounts SusValue;
 
-    public float PeeLevelFactor = 1f;
+    public float PeeMinLevel = 10;
+    public float PeeLevelRange = 20;
+    //public float PeeLevelFactor = 1f;
 
     private void Awake()
     {
@@ -14,11 +16,11 @@ public class ToiletAction: ActionDescription
 
     public override int EvaluateProbability(GameState state)
     {
-        if (!state.IsInside)
-        {
+        if (!state.IsInside)        
             return 0;
-        }
-        return Mathf.RoundToInt(state.PeeLevel * 2 * PeeLevelFactor);
+
+        //return Mathf.RoundToInt(state.PeeLevel * 2 * PeeLevelFactor);
+        return ProbabilityHelper.CalcWithMinimum(state.PeeLevel, PeeMinLevel, PeeMinLevel + PeeLevelRange, GameStateManager.Instance.Balancing.ProbabilityMax * 0.5f);
     }
 
     public override void Execute(GameState state)
