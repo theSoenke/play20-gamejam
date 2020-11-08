@@ -1638,6 +1638,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boxen
       objectReference: {fileID: 0}
+    - target: {fileID: 6277160559813206598, guid: 27705c62c453f6fba89e8abbe05f1dae, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277160559813206598, guid: 27705c62c453f6fba89e8abbe05f1dae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7963072116047291269, guid: 27705c62c453f6fba89e8abbe05f1dae, type: 3}
       propertyPath: MusicSource
       value: 
@@ -3698,7 +3706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2864135995998871138, guid: b838cec9f1427f7efa80b46cc8055f39, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.070464
+      value: 2.73
       objectReference: {fileID: 0}
     - target: {fileID: 2864135995998871138, guid: b838cec9f1427f7efa80b46cc8055f39, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3706,7 +3714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2864135995998871138, guid: b838cec9f1427f7efa80b46cc8055f39, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5531987
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: 2864135995998871138, guid: b838cec9f1427f7efa80b46cc8055f39, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4204,6 +4212,14 @@ PrefabInstance:
     - target: {fileID: 6024071946687126315, guid: 27705c62c453f6fba89e8abbe05f1dae, type: 3}
       propertyPath: m_Name
       value: Boxen (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277160559813206598, guid: 27705c62c453f6fba89e8abbe05f1dae, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277160559813206598, guid: 27705c62c453f6fba89e8abbe05f1dae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7963072116047291269, guid: 27705c62c453f6fba89e8abbe05f1dae, type: 3}
       propertyPath: MusicSource
@@ -4940,6 +4956,10 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2931409375431265840, guid: ae1ce796dd20211d4bb7d7fdc2634a73, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931409375431265840, guid: ae1ce796dd20211d4bb7d7fdc2634a73, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -4950,6 +4970,10 @@ PrefabInstance:
     - target: {fileID: 4074621606482750303, guid: ae1ce796dd20211d4bb7d7fdc2634a73, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148796749095355311, guid: ae1ce796dd20211d4bb7d7fdc2634a73, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4148796749095355311, guid: ae1ce796dd20211d4bb7d7fdc2634a73, type: 3}
       propertyPath: m_StaticEditorFlags
