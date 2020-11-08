@@ -12,7 +12,7 @@ public class DrinkAction : ActionDescription
 
     public string[] Descriptions = new string[]
     {
-        "Oh, look at this nice piece of alcohol!",
+        "Oh, look what we've got there. Is this a drink?",
         "Do I see a beer over there?",
         "Let's grab a cool one!",
         "I could use some beer"
@@ -41,8 +41,5 @@ public class DrinkAction : ActionDescription
     public override string Description(GameState state)
     {
         return RandomString.Select(Descriptions);
-        //string[] responses = { "Oh, look at this nice piece of alcohol!", "Do I see a beer over there?", "Let's grab a cool one!", "I could use some beer" };
-        //int selection = UnityEngine.Random.Range(0, responses.Length);
-        //return responses[selection];
     }
 }
