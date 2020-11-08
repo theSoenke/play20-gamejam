@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,20 +16,6 @@ public class DialogManager : MonoBehaviour
         buttons = dialogView.GetComponentsInChildren<Button>();
         dialogView.SetActive(false);
     }
-
-    //void Update()
-    //{
-    //    switch (gameStateManager.Phase)
-    //    {
-    //        case GamePhase.WaitingForSelection:
-    //            dialogView.SetActive(true);
-    //            UpdateSelection();
-    //            break;
-    //        default:
-    //            dialogView.SetActive(false);
-    //            break;
-    //    }
-    //}
 
     private void OnGamePhaseChanged(GamePhase phase)
     {
