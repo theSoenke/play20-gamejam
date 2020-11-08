@@ -25,9 +25,18 @@ public class DrinkAnimation : ActionAnimation
                 _isAtTarget = true;
                 KenAudio.clip = DrinkBeerClip;
                 KenAudio.Play();
+                Ken.enabled = false;
             }
-            if(_isAtTarget && !KenAudio.isPlaying) {
-                IsRunning = false;
+            if (_isAtTarget) {
+                if (!KenAudio.isPlaying)
+                {
+                    Ken.enabled = true;
+                    IsRunning = false;
+                }
+                else
+                {
+                    Ken.transform.rotation = Quaternion.Lerp(Ken.transform.rotation, DrinkTarget.rotation, Time.deltaTime * 5f);
+                }
             }
         }
     }
