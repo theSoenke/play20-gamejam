@@ -3148,6 +3148,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1764583246 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 576746131012081093, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
+  m_PrefabInstance: {fileID: 576746129370765229}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1789453096
 GameObject:
   m_ObjectHideFlags: 0
@@ -4424,9 +4429,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 692551631}
     - target: {fileID: 5022611610345284816, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
+      propertyPath: Ken
+      value: 
+      objectReference: {fileID: 1764583246}
+    - target: {fileID: 5022611610345284816, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
       propertyPath: KenAudio
       value: 
       objectReference: {fileID: 1849131626}
+    - target: {fileID: 5022611610345284816, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
+      propertyPath: policeman
+      value: 
+      objectReference: {fileID: 5930787825928359161, guid: be6fd7b9831c48649a685640df7964d4, type: 3}
     - target: {fileID: 5022611610345284816, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
       propertyPath: policeSpawn
       value: 
