@@ -15,6 +15,10 @@ public class PoliceArrived : ActionDescription
 
     public override int EvaluateProbability(GameState state)
     {
+        if (!state.IsInside)
+        {
+            return 0;
+        }
         var value = Mathf.Max(0, state.Sus - GameStateManager.Instance.Balancing.SusMax) * 2 * SusFactor;
         return Mathf.RoundToInt(value);
     }

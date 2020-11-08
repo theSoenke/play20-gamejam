@@ -11,6 +11,7 @@ public class PoliceAnimation : ActionAnimation
     public Transform policeSpawn;
 
     private NavMeshAgent navMeshAgent;
+    private Animator animator;
 
 
     public void Update()
@@ -24,6 +25,7 @@ public class PoliceAnimation : ActionAnimation
                     var policeGo = Instantiate(policeman, policeSpawn.position, Quaternion.identity);
                     navMeshAgent = policeGo.GetComponent<NavMeshAgent>();
                     navMeshAgent.SetDestination(Ken.position);
+                    animator = policeGo.GetComponentInChildren<Animator>();
                 }
 
                 if(Vector3.Distance(Ken.transform.position, navMeshAgent.transform.position) < 2f)
@@ -31,6 +33,12 @@ public class PoliceAnimation : ActionAnimation
                     IsRunning = false;
                 }        
             }
+        }
+
+        if(animator != null)
+        {
+            animator.SetFloat("WalkSpeed", navMeshAgent.velocity.magnitude);
+            animator.SetBool("IsWalking", navMeshAgent.enabled);
         }
     }
 
