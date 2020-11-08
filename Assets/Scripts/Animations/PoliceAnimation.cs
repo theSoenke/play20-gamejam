@@ -23,10 +23,10 @@ public class PoliceAnimation : ActionAnimation
                 {
                     var policeGo = Instantiate(policeman, policeSpawn.position, Quaternion.identity);
                     navMeshAgent = policeGo.GetComponent<NavMeshAgent>();
-                    // navMeshAgent.SetDestination(Ken.position);
+                    navMeshAgent.SetDestination(Ken.position);
                 }
 
-                if(Vector3.Distance(Ken.transform.position, navMeshAgent.transform.position) < 0.2)
+                if(Vector3.Distance(Ken.transform.position, navMeshAgent.transform.position) < 2f)
                 {
                     IsRunning = false;
                 }        
