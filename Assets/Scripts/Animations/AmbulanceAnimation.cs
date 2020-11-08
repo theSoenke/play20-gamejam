@@ -22,6 +22,7 @@ public class AmbulanceAnimation : ActionAnimation
     {
         IsRunning = true;
         KenAudio.clip = AmbulanceClip;
+        KenAudio.loop = true;
         KenAudio.Play();
         Ken.enabled = false;
         Ambulance.SetActive(true);
@@ -42,6 +43,7 @@ public class AmbulanceAnimation : ActionAnimation
             if(Vector3.Distance(DoorPosition.position, Ambulance.transform.position) < 0.3) {
                 Ambulance.SetActive(false);
                 KenAudio.Stop();
+                KenAudio.loop = false;
                 IsRunning = false;
             }
         }
