@@ -15,7 +15,10 @@ public class DrinkAction : ActionDescription
         "Oh, look what we've got there. Is this a drink?",
         "Do I see a beer over there?",
         "Let's grab a cool one!",
-        "I could use some beer"
+        "I could use some beer",
+        "Omg, is tha a Corona?",
+        "Blää thats a alcohol free one?"
+        
     };
 
     private void Awake()
