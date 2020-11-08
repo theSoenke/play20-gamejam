@@ -44,7 +44,7 @@ public class DialogManager : MonoBehaviour
             var button = buttons[i];
             var action = actions[i];
             var text = button.GetComponentInChildren<Text>();
-            text.text = action.Description(GameStateManager.Instance.State);
+            text.text = action.Description(GameStateManager.Instance.State) + "(" + action.EvaluateProbability(GameStateManager.Instance.State) +")";
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(() =>
             {

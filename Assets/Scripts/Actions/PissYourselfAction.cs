@@ -5,8 +5,9 @@ public class PissYourselfAction : ActionDescription
     //public float SusValue = 50f;
     public Amounts SusValue;
 
-    public float MinPeeLevel = 30;
-    //public float PeeLevelFactor = 0.5f;
+    //public float MinPeeLevel = 30;
+    public float PeeMaxLevelFactor = 0.9f;
+    public float PeeProbabilityFactor = 0.15f;
 
     public override string Description(GameState state)
     {
@@ -19,7 +20,8 @@ public class PissYourselfAction : ActionDescription
             return 0;
 
         //return Mathf.RoundToInt(state.PeeLevel * PeeLevelFactor);
-        return ProbabilityHelper.CalcWithMinimum(state.PeeLevel, MinPeeLevel, MinPeeLevel + 20, GameStateManager.Instance.Balancing.ProbabilityMax * 0.75f);
+        var peeLevel = GameStateManager.Instance.Balancing.PeeMax * PeeMaxLevelFactor;
+        return ProbabilityHelper.CalcWithMinimum(state.PeeLevel, peeLevel, peeLevel + 20, GameStateManager.Instance.Balancing.ProbabilityMax * PeeProbabilityFactor);
     }
 
     public override void Execute(GameState state)

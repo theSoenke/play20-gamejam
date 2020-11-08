@@ -13,6 +13,8 @@ public class GameBalancingValues : MonoBehaviour
     public float DrunkThreshold = 60;
     public float DrunkMax = 100;
     public float SusMax = 100;
+    public float PeeMax = 60;
+    public float SicknessMax = 80;
     public float ProbabilityMax = 1000;
 
     public float this[Amounts a]

@@ -145,6 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KenAudio: {fileID: 0}
   PoliceClip: {fileID: 8300000, guid: 991b1c586710bb54e827ac39ba6712eb, type: 3}
+  policeman: {fileID: 7764830937341371136, guid: be6fd7b9831c48649a685640df7964d4, type: 3}
+  policeSpawn: {fileID: 0}
 --- !u!1 &5022611612069798261
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +241,8 @@ MonoBehaviour:
   DrunkThreshold: 60
   DrunkMax: 100
   SusMax: 100
+  PeeMax: 80
+  SicknessMax: 80
   ProbabilityMax: 1000
 --- !u!1001 &1260939114241962263
 PrefabInstance:
@@ -654,8 +658,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1464809871}
     - target: {fileID: 4679952657424781227, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
+      propertyPath: PeeMinLevel
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679952657424781227, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
+      propertyPath: PeeLevelRange
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679952657424781227, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
       propertyPath: PeeLevelFactor
       value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679952657424781227, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
+      propertyPath: ProbabilityFactor
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8609143790390159665, guid: faf9744c9de43cd499b23f36d1082a6b, type: 3}
       propertyPath: m_Name
@@ -1136,8 +1152,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3895860505285245655, guid: be0b0343e629c3f4681de4db6bb4a7cb, type: 3}
+      propertyPath: SusValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3895860505285245655, guid: be0b0343e629c3f4681de4db6bb4a7cb, type: 3}
       propertyPath: MinPeeLevel
-      value: 30
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be0b0343e629c3f4681de4db6bb4a7cb, type: 3}

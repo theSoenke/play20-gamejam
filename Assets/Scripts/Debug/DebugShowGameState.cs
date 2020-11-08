@@ -7,6 +7,8 @@ public class DebugShowGameState : MonoBehaviour
 {
     public Text DrunkValueText;
     public Text SusValueText;
+    public Text PeeValueText;
+    public Text SickValueText;
 
     void Start()
     {
@@ -19,6 +21,8 @@ public class DebugShowGameState : MonoBehaviour
         {
             DrunkValueText.text = GameStateManager.Instance.State.Drunk.ToString("0.0");
             SusValueText.text = GameStateManager.Instance.State.Sus.ToString("0.0");
+            PeeValueText.text = GameStateManager.Instance.State.PeeLevel.ToString("0.0");
+            SickValueText.text = GameStateManager.Instance.State.Sickness.ToString("0.0");
         }
     }
 
