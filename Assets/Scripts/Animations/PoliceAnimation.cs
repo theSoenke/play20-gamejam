@@ -5,6 +5,9 @@ public class PoliceAnimation : ActionAnimation
     public AudioSource KenAudio;
     public AudioClip PoliceClip;
 
+    public GameObject policeman;
+    public Transform policeSpawn;
+
 
     public void Update()
     {
@@ -13,6 +16,7 @@ public class PoliceAnimation : ActionAnimation
             if (!KenAudio.isPlaying)
             {
                 IsRunning = false;
+                Instantiate(policeman, policeSpawn.position, Quaternion.identity);
             }
         }
     }

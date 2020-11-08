@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PissYourselfAction : ActionDescription 
+public class PissYourselfAction : ActionDescription
 {
     //public float SusValue = 50f;
     public Amounts SusValue;
@@ -12,7 +10,7 @@ public class PissYourselfAction : ActionDescription
 
     public override string Description(GameState state)
     {
-        return "Piss yourself.";
+        return "I don't think I can hold this any longer";
     }
 
     public override int EvaluateProbability(GameState state)
@@ -28,5 +26,5 @@ public class PissYourselfAction : ActionDescription
     {
         state.SusAdd(GameStateManager.Instance.Balancing[SusValue]);
         state.PissReset(true);
-    }    
+    }
 }
