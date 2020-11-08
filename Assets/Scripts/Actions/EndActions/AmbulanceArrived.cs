@@ -22,6 +22,6 @@ public class AmbulanceArrived : ActionDescription
 
     public override void Execute(GameState state)
     {
-        state.GameOver();
+        state.GameOver(false);
     }   
 }
