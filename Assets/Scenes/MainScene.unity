@@ -2916,7 +2916,7 @@ MonoBehaviour:
   Warp: 0.02
   Blur: 0.8
   TimeScale: 2
-  BlurMin: 0.2
+  BlurMin: 0.1
   DrunkLevelWeight:
     serializedVersion: 2
     m_Curve:
