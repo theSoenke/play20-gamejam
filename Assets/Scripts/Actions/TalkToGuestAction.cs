@@ -51,16 +51,19 @@ public class TalkToGuestAction : ActionDescription
         if(state.Drunk < 40)
         {
             state.SusAdd(-GameStateManager.Instance.Balancing[SusValue]);
+            state.Talk();
         } 
         else
         {
             if(Random.Range(0, AddSusProbability) == 0)
             {
                 state.SusAdd(GameStateManager.Instance.Balancing[SusValue] * 1.5f);
+                state.Talk(true);
             }
             else
             {
                 state.SusAdd(-GameStateManager.Instance.Balancing[SusValue] * 0.5f);
+                state.Talk();
             }
         }
         //if (state.Drunk < 40 && state.Sus > 15 && state.Sus < 60)

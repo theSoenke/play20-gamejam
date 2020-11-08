@@ -36,6 +36,7 @@ public class PukePotAction : ActionDescription
 
     public override void Execute(GameState state)
     {
+        state.Puke(false);
         state.SusAdd(GameStateManager.Instance.Balancing[SusValue]);
         state.SoberUp(GameStateManager.Instance.Balancing[SicknessValue] * 2, GameStateManager.Instance.Balancing[DrunkValue] * 0.5f);
     }   

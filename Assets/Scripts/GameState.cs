@@ -9,6 +9,7 @@ public class GameState : MonoBehaviour
     public float Sickness { get; protected set; }
 
     public bool HasPeedHimself { get; protected set; }
+    public bool WasCaughtByPolice { get; protected set; }
 
     public bool IsInside { get; protected set; }
     public bool IsGameOver { get; protected set; }
@@ -107,9 +108,10 @@ public class GameState : MonoBehaviour
         IsInside = true;
     }
 
-    public void GameOver()
+    public void GameOver(bool police=true)
     {
         IsGameOver = true;
+        WasCaughtByPolice = police;
     }
 
 

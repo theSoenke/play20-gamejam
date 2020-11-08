@@ -48,6 +48,7 @@ public class DanceAction : ActionDescription
 
     public override void Execute(GameState state)
     {
+        state.Dance();
         if(state.Drunk < 40 && state.Sus > 15 && state.Sus < 60)
         {
             state.SusAdd(-GameStateManager.Instance.Balancing[SusValue]);
