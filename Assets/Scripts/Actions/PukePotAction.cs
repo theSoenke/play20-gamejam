@@ -9,6 +9,7 @@ public class PukePotAction : ActionDescription
 
     public Amounts SusValue;
     public Amounts DrunkValue;
+    public Amounts SicknessValue;
 
     public override string Description(GameState state)
     {
@@ -36,7 +37,7 @@ public class PukePotAction : ActionDescription
     public override void Execute(GameState state)
     {
         state.SusAdd(GameStateManager.Instance.Balancing[SusValue]);
-        state.SoberUp(GameStateManager.Instance.Balancing[DrunkValue], GameStateManager.Instance.Balancing[DrunkValue] * 0.5f);
+        state.SoberUp(GameStateManager.Instance.Balancing[SicknessValue] * 2, GameStateManager.Instance.Balancing[DrunkValue] * 0.5f);
     }   
 }
 
