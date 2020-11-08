@@ -1,4 +1,6 @@
-﻿public class DrinkAction : ActionDescription
+﻿using UnityEngine;
+
+public class DrinkAction : ActionDescription
 {
     //public float DrinkStrengthValue = 2f;
     //public float DrinkVolumeValue = 4f;
@@ -27,7 +29,7 @@
         {
             return 0;
         }
-        return 10;
+        return Mathf.RoundToInt(GameStateManager.Instance.Balancing.ProbabilityMax / 100f);
     }
 
     public override void Execute(GameState state)

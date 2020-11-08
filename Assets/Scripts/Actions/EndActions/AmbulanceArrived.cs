@@ -5,7 +5,7 @@ using UnityEngine;
 public class AmbulanceArrived : ActionDescription
 {
     public float SusValue = 10f;
-    public float DrunkThreshold = 100f;
+    //public float DrunkThreshold = 100f;
     public float DrunkFactor = 1f;
 
 
@@ -16,7 +16,7 @@ public class AmbulanceArrived : ActionDescription
 
     public override int EvaluateProbability(GameState state)
     {
-        var value = Mathf.Max(0, state.Drunk - DrunkThreshold) * 2 * DrunkFactor;
+        var value = Mathf.Max(0, state.Drunk - GameStateManager.Instance.Balancing.DrunkMax) * 2 * DrunkFactor;
         return Mathf.RoundToInt(value);
     }
 

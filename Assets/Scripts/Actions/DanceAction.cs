@@ -30,16 +30,19 @@ public class DanceAction : ActionDescription
         if (!state.IsInside)
             return 0;
 
-        if(state.Drunk >= 10 && state.Drunk < 30)
-        {
-            return Mathf.RoundToInt(2 + ((state.Drunk-10) / 20) * 18);
-        }
-        else if (state.Drunk > 30)
-        {
-            return Mathf.RoundToInt(20 + (state.Drunk - 30) / 2);
-        }
+        //if(state.Drunk >= 10 && state.Drunk < 30)
+        //{
+        //    return Mathf.RoundToInt(2 + ((state.Drunk-10) / 20) * 18);
+        //}
+        //else if (state.Drunk > 30)
+        //{
+        //    return Mathf.RoundToInt(20 + (state.Drunk - 30) / 2);
+        //}
 
-        return 2;
+        //return 2;
+        //if()
+        return ProbabilityHelper.CalcWithMinimum(state.Drunk, 20, GameStateManager.Instance.Balancing.DrunkMax, GameStateManager.Instance.Balancing.ProbabilityMax * 0.5f);
+            //Mathf.RoundToInt((state.Drunk / GameStateManager.Instance.Balancing.DrunkMax) * GameStateManager.Instance.Balancing.ProbabilityMax;
     }
 
     public override void Execute(GameState state)

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PoliceArrived : ActionDescription
 {
 
-    public float SuspicionThreshold = 100f;
+    //public float SuspicionThreshold = 100f;
     public float SusFactor = 1f;
 
     public override string Description(GameState state)
@@ -15,8 +15,7 @@ public class PoliceArrived : ActionDescription
 
     public override int EvaluateProbability(GameState state)
     {
-
-        var value = Mathf.Max(0, state.Sus - SuspicionThreshold) * 2 * SusFactor;
+        var value = Mathf.Max(0, state.Sus - GameStateManager.Instance.Balancing.SusMax) * 2 * SusFactor;
         return Mathf.RoundToInt(value);
     }
 
