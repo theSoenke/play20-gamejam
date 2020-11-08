@@ -33,6 +33,7 @@ public class GameStateManager : MonoBehaviour
     public SceneField EndScene;
 
     public GameState State;
+    public GameBalancingValues Balancing;
     public ActionDescription[] ActionsForSelection;
     public event Action<GamePhase> GamePhaseChanged;
     public GamePhase Phase

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class DanceAction : ActionDescription
 {
-    public float SuspicionValue = 5f;
-    public float DrinkValue = 2f;
+    //public float SuspicionValue = 5f;
+    //public float DrinkValue = 2f;
+    public Amounts SusValue;
+    public Amounts DrinkValue;
 
     public override string Description(GameState state)
     {
@@ -44,15 +46,15 @@ public class DanceAction : ActionDescription
     {
         if(state.Drunk < 40 && state.Sus > 15 && state.Sus < 60)
         {
-            state.SusAdd(-SuspicionValue);
+            state.SusAdd(-GameStateManager.Instance.Balancing[SusValue]);
         } 
         else if (state.Drunk >= 40)
         {
-            state.SusAdd(SuspicionValue);
+            state.SusAdd(GameStateManager.Instance.Balancing[SusValue]);
         }
         if (state.Drunk > 20)
         {
-            state.SoberUp(DrinkValue, DrinkValue * 0.5f);
+            state.SoberUp(GameStateManager.Instance.Balancing[DrinkValue], GameStateManager.Instance.Balancing[DrinkValue] * 0.5f);
         }
     }
 }

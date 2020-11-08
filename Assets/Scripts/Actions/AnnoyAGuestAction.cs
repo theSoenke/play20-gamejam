@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class AnnoyAGuestAction : ActionDescription
 {
-    public float SusValue = 10f;
+    //public float SusValue = 10f;
+    public Amounts SusValue;
 
     public override string Description(GameState state)
     {
@@ -32,7 +33,7 @@ public class AnnoyAGuestAction : ActionDescription
         }
         else
         {
-           state.SusAdd(SusValue);
+           state.SusAdd(GameStateManager.Instance.Balancing[SusValue]);
         }
        
    

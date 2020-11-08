@@ -2,7 +2,8 @@
 
 public class ToiletAction: ActionDescription
 {
-    public float SusValue = 10f;
+    //public float SusValue = 10f;
+    public Amounts SusValue;
 
     public float PeeLevelFactor = 1f;
 
@@ -22,7 +23,7 @@ public class ToiletAction: ActionDescription
 
     public override void Execute(GameState state)
     {
-        state.SusAdd(SusValue);   
+        state.SusAdd(GameStateManager.Instance.Balancing[SusValue]);   
         state.PissReset();  
     }
 

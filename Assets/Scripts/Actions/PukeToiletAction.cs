@@ -2,8 +2,11 @@
 
 public class PukeToiletAction : ActionDescription
 {
-    public float SusValue = 10f;
-    public float DrunkValue = 2f;
+    //public float SusValue = 10f;
+    //public float DrunkValue = 2f;
+
+    public Amounts SusValue;
+    public Amounts DrunkValue;
 
     public float PukeThreshold = 75;
     public float PukeFactor = 1f;
@@ -33,7 +36,7 @@ public class PukeToiletAction : ActionDescription
 
     public override void Execute(GameState state)
     {
-        state.SusAdd(SusValue);
-        state.SoberUp(DrunkValue, DrunkValue * 0.5f);
+        state.SusAdd(GameStateManager.Instance.Balancing[SusValue]);
+        state.SoberUp(GameStateManager.Instance.Balancing[DrunkValue], GameStateManager.Instance.Balancing[DrunkValue] * 0.5f);
     }
 }

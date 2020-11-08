@@ -1,8 +1,12 @@
 ﻿public class DrinkAction : ActionDescription
 {
-    public float DrinkStrengthValue = 2f;
-    public float DrinkVolumeValue = 4f;
-    public float SusMaxValue = 2f;
+    //public float DrinkStrengthValue = 2f;
+    //public float DrinkVolumeValue = 4f;
+    //public float SusMaxValue = 2f;
+
+    public Amounts DrinkStrength;
+    public Amounts DrinkVolume;
+    public Amounts SusValue;
 
     private void Awake()
     {
@@ -20,8 +24,8 @@
 
     public override void Execute(GameState state)
     {
-        state.Drink(DrinkStrengthValue, DrinkVolumeValue);
-        state.SusAdd(SusMaxValue * ((state.Sus + SusMaxValue) / 100));
+        state.Drink(GameStateManager.Instance.Balancing[DrinkStrength], GameStateManager.Instance.Balancing[DrinkVolume]);
+        state.SusAdd(GameStateManager.Instance.Balancing[SusValue] * ((state.Sus + GameStateManager.Instance.Balancing[SusValue]) / 100));
     }
 
     public override string Description(GameState state)

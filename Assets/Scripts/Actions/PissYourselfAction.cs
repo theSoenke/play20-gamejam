@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PissYourselfAction : ActionDescription 
 {
-    public float SusValue = 50f;
+    //public float SusValue = 50f;
+    public Amounts SusValue;
 
     public float MinPeeLevel = 50;
     public float PeeLevelFactor = 0.5f;
@@ -25,7 +26,7 @@ public class PissYourselfAction : ActionDescription
 
     public override void Execute(GameState state)
     {
-        state.SusAdd(SusValue);
+        state.SusAdd(GameStateManager.Instance.Balancing[SusValue]);
         state.PissReset(true);
     }    
 }
