@@ -21,7 +21,7 @@ public class DanceAction : ActionDescription
         } 
         else
         {
-            return RandomString.Select("Danceeeeeeee", "Gooooo! Danceee!!", "Dance! Dance!! Dance!!!");
+            return RandomString.Select("Danceeeeeeee", "Gooooo! Danceee!!", "Dance! Dance!! Dance!!!", "Shake, Shake, Shake your  booties", "Y M C A ...  ");
         }
     }
 
