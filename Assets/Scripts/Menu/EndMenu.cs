@@ -9,7 +9,8 @@ public class EndMenu : MonoBehaviour
     public RectTransform StatsRoot;
     public GameObject StatsEntryPrefab;
     public SceneField Scene;
-   
+
+    public bool ShowAll = false;
 
     void Awake()
     {
@@ -30,17 +31,17 @@ public class EndMenu : MonoBehaviour
         AddStatsEntry("Shots", GameStateManager.Instance.State.Shots.ToString("0"));
         AddStatsEntry("Danced", GameStateManager.Instance.State.Danced.ToString("0"));
         AddStatsEntry("Talked to Guests", GameStateManager.Instance.State.Talked.ToString("0"));
-        if (GameStateManager.Instance.State.TalkCausedAnnoyedGuest > 0)
+        if (ShowAll || GameStateManager.Instance.State.TalkCausedAnnoyedGuest > 0)
         {
             AddStatsEntry("Talking annoyed Guests", GameStateManager.Instance.State.TalkCausedAnnoyedGuest.ToString("0"));
         }
         AddStatsEntry("Puked", GameStateManager.Instance.State.Puked.ToString("0"));
         var pukedInRoom = GameStateManager.Instance.State.Puked - GameStateManager.Instance.State.PukedInToilett;
-        if (pukedInRoom > 0)
+        if (ShowAll || pukedInRoom > 0)
         {
             AddStatsEntry("Puked in room", pukedInRoom.ToString("0"));
         }
-        if (GameStateManager.Instance.State.HasPeedHimself)
+        if (ShowAll || GameStateManager.Instance.State.HasPeedHimself)
         {
             AddStatsEntry("Peed yourself", "Yes");
         }
