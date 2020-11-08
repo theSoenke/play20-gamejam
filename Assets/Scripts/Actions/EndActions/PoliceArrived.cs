@@ -10,7 +10,7 @@ public class PoliceArrived : ActionDescription
 
     public override string Description(GameState state)
     {
-        return "Shit... Cops";
+        return RandomString.Select("Shit... Cops", "The cops are here", "They gonna arrest me!");
     }
 
     public override int EvaluateProbability(GameState state)

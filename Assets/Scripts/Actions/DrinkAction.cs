@@ -16,8 +16,8 @@ public class DrinkAction : ActionDescription
         "Do I see a beer over there?",
         "Let's grab a cool one!",
         "I could use some beer",
-        "Omg, is tha a Corona?",
-        "Blää thats a alcohol free one?"
+        "Omg, is that a Corona?",
+        "Blää that's a alcohol free one?"
         
     };
 
