@@ -55,6 +55,7 @@ public class GameState : MonoBehaviour
     public void SusAdd(float value)
     {
         Sus += value;
+        if (Sus < 0) Sus = 0;
     }
 
     public void PissReset(bool himself=false)

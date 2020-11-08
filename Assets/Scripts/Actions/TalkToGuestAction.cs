@@ -5,7 +5,7 @@ using UnityEngine;
 public class TalkToGuestAction : ActionDescription
 {
     public Amounts SusValue;
-    public Amounts DrinkValue;
+    //public Amounts DrinkValue;
     public float PropabilityFactor = 0.025f;
     public float AddSusProbability = 10;
 
@@ -29,6 +29,7 @@ public class TalkToGuestAction : ActionDescription
     {
         if (!state.IsInside)
             return 0;
+
 
         //if(state.Drunk >= 10 && state.Drunk < 30)
         //{

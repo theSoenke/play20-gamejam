@@ -21,6 +21,8 @@ public class TalkToGuestAnimation : ActionAnimation
             {
                 _isAtTarget = true;
                 Ken.enabled = false;
+                KenAudio.clip = MumbleClip;
+                KenAudio.Play();
             }
             if (_isAtTarget)
             {
@@ -33,9 +35,7 @@ public class TalkToGuestAnimation : ActionAnimation
                 else
                 {
                     //Do Talk      
-                    Ken.transform.rotation = Quaternion.Lerp(Ken.transform.rotation, _targetPoint.rotation, Time.deltaTime * 5f);
-                    KenAudio.clip = MumbleClip;
-                    KenAudio.Play();
+                    Ken.transform.rotation = Quaternion.Lerp(Ken.transform.rotation, _targetPoint.rotation, Time.deltaTime * 5f);                    
                 }
             }
         }
@@ -48,6 +48,7 @@ public class TalkToGuestAnimation : ActionAnimation
         _targetPoint = Menschen.GetRandomTransform();
         if (!(Vector3.Distance(Ken.transform.position, _targetPoint.position) < 0.2))
         {
+            Ken.enabled = true;
             Ken.Nav.SetDestination(_targetPoint.position);
         }
     }
