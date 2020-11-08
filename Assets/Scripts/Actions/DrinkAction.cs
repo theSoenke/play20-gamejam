@@ -10,6 +10,10 @@ public class DrinkAction : ActionDescription
     public Amounts DrinkVolume;
     public Amounts SusValue;
 
+    public bool IsBeer;
+    public bool IsShot;
+    public bool IsLongdrink;
+
     public string[] Descriptions = new string[]
     {
         "Oh, look what we've got there. Is this a drink?",
@@ -38,6 +42,7 @@ public class DrinkAction : ActionDescription
     public override void Execute(GameState state)
     {
         state.Drink(GameStateManager.Instance.Balancing[DrinkStrength], GameStateManager.Instance.Balancing[DrinkVolume]);
+        state.AddDrink(IsBeer, IsShot, IsLongdrink);
         state.SusAdd(GameStateManager.Instance.Balancing[SusValue] * ((state.Sus + GameStateManager.Instance.Balancing[SusValue]) / 100));
     }
 

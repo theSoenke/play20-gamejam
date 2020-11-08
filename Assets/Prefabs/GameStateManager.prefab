@@ -736,6 +736,10 @@ PrefabInstance:
       value: DrinkBeer
       objectReference: {fileID: 0}
     - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: IsBeer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
       propertyPath: Animation
       value: 
       objectReference: {fileID: 1637734918}
@@ -1002,6 +1006,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: IsLongdrink
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
       propertyPath: DrinkStrength
       value: 1
       objectReference: {fileID: 0}
@@ -1107,6 +1115,10 @@ PrefabInstance:
     - target: {fileID: 6888346165150883474, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
       propertyPath: m_Name
       value: DrinkShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
+      propertyPath: IsShot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8289478247119843062, guid: a0aeacab41e546a4ebf11197d203ed97, type: 3}
       propertyPath: SusValue
