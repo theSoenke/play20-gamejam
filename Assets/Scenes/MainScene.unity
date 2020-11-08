@@ -3400,6 +3400,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1849131625, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 576746131012081093, guid: b6e7a6d3a651ed23ca133332c5c399fd, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -3484,7 +3488,7 @@ PrefabInstance:
     - target: {fileID: 839130992, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
       propertyPath: Ken
       value: 
-      objectReference: {fileID: 1835805414}
+      objectReference: {fileID: 1849131625}
     - target: {fileID: 839130992, guid: caabfc2526ecafa4db0b1aaea8e2cfaf, type: 3}
       propertyPath: KenMesh
       value: 
